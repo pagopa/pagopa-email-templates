@@ -1,0 +1,139 @@
+<mjml lang="it">
+  <mj-head>
+    <mj-font name="Titillium Web" href="https://fonts.googleapis.com/css?family=Titillium+Web:regular,bold" />
+    <mj-attributes>
+      <mj-all font-family="Titillium Web, Arial" />
+    </mj-attributes>
+    <mj-raw>
+      <style type="text/css">
+      @media (min-width:768px) { 
+        body {
+          background-color:#E6E9F2!important;
+        }
+      }
+      </style>
+    </mj-raw>
+  </mj-head>
+  <mj-body>
+    <mj-wrapper>
+      <!-- vuoto sopra 
+      <mj-section>
+        <mj-column>
+          <mj-spacer height="32px" />
+        </mj-column>
+      </mj-section>-->
+      <!-- logo pagoPA -->
+      <mj-section background-color="#ffffff" border-top="solid 8px #0073E6" border-left="solid 1px #E6E9F2 " border-right="solid 1px #E6E9F2">
+        <mj-column>
+          <mj-spacer height="80px" />
+          <mj-image width="72px" src="https://jacopompilii.com/pagopa/pagopa.png" align="left"></mj-image>
+        </mj-column>
+      </mj-section>
+      <!-- Titolo e sottotitolo -->
+      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+        <mj-column>
+          <mj-text font-size="32px" line-height="40px" color="#17324D" font-weight="bold" align="left">Hai inviato un pagamento di &euro;$formatter.format('#,##0.00', $importo) tramite pagoPA</mj-text>
+          <mj-spacer height="40px"></mj-spacer>
+          <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="regular" align="left">Ciao $nomeCognome,<br>il tuo pagamento &egrave; andato a buon fine.<br>Di seguito trovi tutti i dettagli dell&rsquo;operazione.</mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- Dettaglio transazione -->
+      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+        <!-- colonna sinistra -->
+        <mj-column>
+          <mj-text color="#455B71" font-size="16px" padding-bottom="0px">Intestatario</mj-text>
+          <mj-text color="#455B71" font-size="16px" font-weight="bold" padding-top="4px">$nomeCognome #if($codiceFiscale) - $codiceFiscale #end</mj-text>
+          <mj-text color="#455B71" font-size="16px" padding-bottom="0px">Indirizzo e-mail</mj-text>
+          <mj-text color="#455B71" font-size="16px" font-weight="bold" padding-top="4px">$email</mj-text>
+          <mj-text color="#455B71" font-size="16px" padding-bottom="0px">RRN</mj-text>
+          <mj-text color="#455B71" font-size="16px" font-weight="bold" padding-top="4px">$rrn</mj-text>
+          <mj-text color="#455B71" font-size="16px" padding-bottom="0px">Codice Autorizzativo</mj-text>
+          <mj-text color="#455B71" font-size="16px" font-weight="bold" padding-top="4px">$codiceAutorizzativo</mj-text>
+        </mj-column>
+        <!-- colonna destra -->
+        <mj-column>
+          <mj-text color="#455B71" font-size="16px" padding-bottom="0px">Metodo di pagamento</mj-text>
+          <mj-text color="#455B71" font-size="16px" font-weight="bold" padding-top="4px"><img src="https://jacopompilii.com/pagopa/mastercard.svg" width="24px" align="left" /> $circuitoCarta $numeroCarta</mj-text>
+          <mj-text color="#455B71" font-size="16px" padding-bottom="0px">Intestato a</mj-text>
+          <mj-text color="#455B71" font-size="16px" font-weight="bold" padding-top="4px">$intestatarioCarta</mj-text>
+          <mj-text color="#455B71" font-size="16px" padding-bottom="0px">Gestore della transazione</mj-text>
+          <!-- $gestoreTransazioneLogo -->
+          <mj-image src="https://jacopompilii.com/pagopa/isp.png" align="left" alt="Intesa Sanpaolo" height="36px" width="160px" padding-top="0px" padding-bottom="0px"></mj-image>
+          <!--<mj-text color="#455B71" font-size="16px" font-weight="bold" padding-top="4px">$gestoreTransazione</mj-text>-->
+          <mj-text color="#455B71" font-size="16px" padding-bottom="0px">Data e ora</mj-text>
+          <mj-text color="#455B71" font-size="16px" font-weight="bold" padding-top="4px">$dataOra</mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- divider -->
+      <mj-section background-color="#ffffff" padding-top="0px" padding-bottom="0px" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+        <mj-column>
+          <mj-divider border-color="#5C6F82" border-width="1px"></mj-divider>
+        </mj-column>
+      </mj-section>
+      <!-- dettaglio posizioni -->
+      <mj-section background-color="#ffffff" padding-top="0px" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+        <mj-column>
+          <mj-table>
+            <tr style="border-bottom:1px solid #E6E9F2;text-align:left;padding:15px 0;color:#455B71; font-size:14px">
+              <td style="padding: 0 15px 0 0;">Debitore</td>
+              <td style="padding: 0 15px;">Beneficiario</td>
+              <td style="padding: 0 15px;">IUV</td>
+              <td style="padding: 0 0 0 15px; text-align:right;">Importo (&euro;)</td>
+            </tr>
+            <!-- #foreach($beneficiario in $beneficiari)
+          <tr style="border-bottom:1px solid #E6E9F2; padding-top:8px">
+            <td style="padding: 0 15px 0 0;">$beneficiario.nomePagatore#if($beneficiario.codicePagatore)<br>$beneficiario.codicePagatore #end</td>
+            <td style="padding: 0 15px;">$beneficiario.enteBeneficiario</td>
+            <td style="padding: 0 15px;">$beneficiario.iuv</td>
+              <td style="padding: 0 0 0 15px;">$formatter.format('#,##0.00', $beneficiario.importo)</td> -->
+            <tr style="border-bottom:1px solid #E6E9F2; padding:16px 8px 0 0; vertical-align:top; font-size:14px">
+              <td style="padding: 8px 15px 0 0; font-weight:bold;">Mario Rossi<br>MRARSS60D12A123Z</td>
+              <td style="padding: 8px 15px; font-weight:bold;">Comune di Milano<br>01199250158</td>
+              <td style="padding: 8px 15px; font-weight:bold;">12200709061180792</td>
+              <td style="padding: 8px 0; text-align:right; font-weight:bold;">80,00</td>
+            </tr>
+            <tr style="vertical-align:top; font-size:14px; border-bottom: 1px solid #E6E9F2;">
+              <td style="border-top:1px solid #5C6F82"></td>
+              <td style="border-top:1px solid #5C6F82"></td>
+              <td style="border-top:1px solid #5C6F82; padding: 8px 15px;">Importo parziale</td>
+              <td style="border-top:1px solid #5C6F82;padding: 8px 0; text-align:right; font-weight:bold;">80,00</td>
+            </tr>
+            <tr style="vertical-align:top; font-size:14px; border-bottom: 1px solid #E6E9F2; border-bottom:1px solid #5C6F82;">
+              <td></td>
+              <td></td>
+              <td style="padding: 8px 15px;">Costo transazione</td>
+              <td style="padding: 8px 0; text-align:right; font-weight:bold;">1,00</td>
+            </tr>
+            <tr style="vertical-align:top; font-size:14px; border-bottom: 1px solid #E6E9F2; border-bottom:1px solid #5C6F82;">
+              <td></td>
+              <td></td>
+              <td style="padding: 8px 15px; font-weight:bold;">Totale</td>
+              <td style="padding: 8px 0; text-align:right; font-weight:bold;">81,00</td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+      <!-- FAQ -->
+      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
+        <mj-column>
+          <mj-text font-size="16px" line-height="24px" font-weight="regular"><b>Problemi con questa transazione?</b> <br>Puoi contattare il servizio di assistenza di pagoPA, al seguente <a href="$centroRisoluzioniUrl" style="font-weight: bold;color: #0066CC;">link</a>.</mj-text>
+          <mj-text font-size="16px" line-height="24px" font-weight="regular"><b>Domande?</b> <br>Accedi alla sezione Domande Frequenti all&rsquo;indirizzo: <a href="$faqUrl" style="font-weight: bold;color: #0066CC;">$faqUrl</a></mj-text>
+          <mj-text font-size="16px" line-height="24px">Non rispondere a questa email. Questa casella di posta &egrave; utilizzata solo per l&rsquo;invio della presente mail e, non essendo monitorata, non riceveresti risposta.</mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- Saluti -->
+      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2" border-bottom="solid 1px #E6E9F2">
+        <mj-column>
+          <mj-text font-size="16px" line-height="24px">A presto,<br>il team di pagoPA</mj-text>
+          <mj-spacer height="80px" />
+        </mj-column>
+      </mj-section>
+      <!-- vuoto sotto -->
+      <mj-section>
+        <mj-column>
+          <mj-spacer height="32px" />
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
