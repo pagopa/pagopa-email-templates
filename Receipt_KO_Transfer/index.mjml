@@ -1,129 +1,33 @@
 <mjml lang="it">
   <mj-head>
-    <mj-title>Il tuo pagamento con pagoPA</mj-title>
-    <mj-font name="Titillium Web" href="https://fonts.googleapis.com/css?family=Titillium+Web:regular,bold" />
+    <mj-title>Il pagamento non è riuscito</mj-title>
+    <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, Arial" />
     </mj-attributes>
-    <mj-raw>
-      <style type="text/css">
-        .mobile {
-        display:block;
-        }
-        
-        .desktop {
-        display:none;
-        }
-        
-        h1 {
-        font-size: 32px;
-        line-height: 40px;
-        color: #17324D;
-        font-weight: 700;
-        text-align: left; 
-        }
-        
-        h4 {
-        margin-bottom: 0px;
-        }
-        
-        p {
-        margin-top: 0px;
-        }
-        
-        .circuito {
-        padding-right:4px;
-        }
-      </style>
-      <style type="text/css">
-      @media (min-width:600px) { 
-        body {
-          background-color:#E6E9F2;
-        }
-        
-        .mobile {
-        display:none;
-        }
-        
-        .desktop {
-        display:block;
-        }
-      }
-      </style>
-      <style type="text/css">
-      @media print { 
-        body {
-          background-color:white !important;
-        }
-           
-        .spaziatura, .intro, .faq, .mobile {
-        display:none;
-        }
-        
-        .desktop {
-        display:block;
-        }
-        
-        h1 {
-        font-size: 24px !important;
-        }
-        
-        .logopagopa {
-        width:24px !important;
-        }
-        
-        .mj-column-per-50 {
-        width:50% !important;
-        }
-
-      }
-      </style>
-    </mj-raw>
   </mj-head>
-  <mj-body>
+  <mj-body css-class="mail-body">
+    <mj-include path="../style.css" type="css" />
     <mj-wrapper>
-      <!-- vuoto sopra 
-      <mj-section>
+      <mj-section css-class="container">
         <mj-column>
-          <mj-spacer height="32px" />
-        </mj-column>
-      </mj-section>-->
-      <!-- logo pagoPA -->
-      <mj-section background-color="#ffffff" border-top="solid 8px #0073E6" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
-        <mj-column>
-          <mj-spacer height="48px" css-class="spaziatura" />
-          <mj-text>
-            <mj-raw>
-            <img src="pagopa.png" alt="Logo di PagoPA" class="logopagopa" width="72" align="left" style="display:block;width:72px;"/>
-          </mj-raw>
+          <!-- pagoPA Logo -->
+          <mj-include path="../partials/main-logo.mjml" />
+          <!-- Title & Main Message -->
+          <mj-text css-class="title" font-weight="bold" align="left">
+            <h1 style="font-size: 32px; line-height: 40px; margin: 0;">
+              Ops! Il pagamento di 150,00 &euro; tramite pagoPA non &egrave; riuscito
+            </h1>
           </mj-text>
-        </mj-column>
-      </mj-section>
-      <!-- Titolo e sottotitolo -->
-      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2">
-        <mj-column>
-          <mj-text color="#17324D" font-weight="bold" align="left" css-class="titolo"><h1 style="font-size:32px; line-height:40px;">Ops! Il pagamento di &euro;81,00 tramite pagoPA non &egrave; riuscito</h1></mj-text>
-          <mj-text font-size="16px" line-height="24px" color="#17324D" font-weight="400" align="left" css-class="intro"><p>Ciao $nomeCognome,<br aria-hidden="true">il tuo pagamento (ID pagamento: $idPagamento) non &egrave; andato a buon fine.<br aria-hidden="true">Non &egrave; stato addebitato nessun importo sul metodo di pagamento che hai scelto.</p></mj-text>
-        </mj-column>
-      </mj-section>
-      <!-- FAQ -->
-      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2" css-class="faq">
-        <mj-column>
-          <mj-text font-size="16px" line-height="24px" font-weight="regular"><h4>Problemi con questa transazione?</h4><p>Puoi contattare il <a href="https://www.pagopa.gov.it/it/pagopa/helpdesk/" style="font-weight: bold;color: #0066CC;">servizio di assistenza di PagoPA</a>.</p></mj-text>
-            <mj-text font-size="16px" line-height="24px"><p>Non rispondere a questa email. Questa casella di posta &egrave; utilizzata solo per l&rsquo;invio della presente mail e, non essendo monitorata, non riceveresti risposta.</p></mj-text>
-        </mj-column>
-      </mj-section>
-      <!-- Saluti -->
-      <mj-section background-color="#ffffff" border-left="solid 1px #E6E9F2" border-right="solid 1px #E6E9F2" border-bottom="solid 1px #E6E9F2">
-        <mj-column>
-          <mj-text font-size="16px" line-height="24px"><p>A presto,<br aria-hidden="true">il team di pagoPA</p></mj-text>
-          <mj-spacer height="24px" css-class="spaziatura"/>
-        </mj-column>
-      </mj-section>
-      <!-- vuoto sotto -->
-      <mj-section>
-        <mj-column>
-          <mj-spacer height="24px" css-class="spaziatura"/>
+          <mj-spacer height="8px" css-class="spacer" />
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left">
+            <p>
+              Il tuo pagamento non &egrave; andato a buon fine. <br aria-hidden="true">
+              Non &egrave; stato addebitato nessun importo sul metodo di pagamento utilizzato.
+            </p>
+          </mj-text>
+          <!-- Footer -->
+          <mj-include path="../partials/footer.mjml" />
         </mj-column>
       </mj-section>
     </mj-wrapper>

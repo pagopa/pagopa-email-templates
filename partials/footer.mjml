@@ -1,0 +1,23 @@
+<!-- Help -->
+<mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular">
+  <h4>Serve aiuto?</h4>
+  <p>
+    Contatta il <a href="https://www.pagopa.gov.it/it/pagopa/helpdesk/" style="font-weight: bold;color: #0066CC;">servizio di assistenza</a>  e comunica il codice transazione:
+    <br aria-hidden="true">
+    F57E2F8E-25FF-4183-AB7B-4A5EC1A96644.
+  </p>
+</mj-text>
+<mj-spacer height="8px" css-class="spacer" />
+<mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular">
+    <p>
+    Non rispondere a questa email. Questa casella di posta &egrave; utilizzata solo per l&rsquo;invio della presente mail e, non essendo monitorata, non riceveresti risposta.
+  </p>
+</mj-text>
+<mj-spacer height="8px" css-class="spacer" />
+<!-- Saluti -->
+<mj-text css-class="text" font-size="16px" line-height="24px">
+  <p>
+    A presto,
+    <br aria-hidden="true">il team di pagoPA
+  </p>
+</mj-text>

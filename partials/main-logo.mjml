@@ -1,0 +1,4 @@
+
+  <mj-spacer height="8px" css-class="spacer" />
+  <mj-image width="72px" alt="Logo di PagoPA" css-class="logopagopa" align="left" src="../assets/logo_pagopa.png" />
+  <mj-spacer height="8px" css-class="spacer" />
