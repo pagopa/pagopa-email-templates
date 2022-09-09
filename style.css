@@ -25,6 +25,11 @@ body,
   color: #17324D !important;
 }
 
+.caption,
+.caption div {
+  color: #5C6F82 !important;
+}
+
 .key,
 .key div {
   color: #5C6F82 !important;
@@ -91,6 +96,11 @@ p {
   }
 
   .text div {
+    color: #EEEEEE !important;
+  }
+
+  .caption,
+  .caption div {
     color: #EEEEEE !important;
   }
 
