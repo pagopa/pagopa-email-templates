@@ -14,7 +14,7 @@ The minified HTML output should be exported and committed with the template itse
 
 ## How to deploy changes
 
-To add
+All the mail are sent through [pagopa-notifications-service](https://github.com/pagopa/pagopa-notifications-service).
 
 ## Compatibility
 
