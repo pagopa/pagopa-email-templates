@@ -1,0 +1,32 @@
+<!-- Transaction Detail -->
+<mj-section css-class="section" padding-bottom="0px" padding-top="0px">
+  <!-- Left column -->
+  <mj-column>
+    <!-- If user is authenticated, show:
+      Name + Surname (Fiscal Code)
+    -->
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Pagato da</mj-text>
+    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">Marzia Roccaraso (RCCMRZ88A52C409A)</mj-text>
+    <!-- Always show the following fields: -->
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Indirizzo email</mj-text>
+    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">mario.rossi@pagopa.it</mj-text>
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">ID transazione (RRN)</mj-text>
+    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">123456789</mj-text>
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Codice autorizzativo</mj-text>
+    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">1234567890123456800</mj-text>
+  </mj-column>
+  <!-- Right column -->
+  <mj-column>
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Metodo di pagamento</mj-text>
+    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="16px" font-weight="bold" padding-top="4px" padding-bottom="8px">
+      <img src="../assets/methods/mastercard.png" width="24" align="left" alt="Logo Mastercard" aria-hidden="true" class="payment-method">
+      Mastercard *1234
+    </mj-text>
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Intestato a</mj-text>
+    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">Mario Rossi</mj-text>
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px"padding-top="8px">Gestore della transazione (PSP)</mj-text>
+    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">American Express Payment Services</mj-text>
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px"padding-top="8px" >Data e ora</mj-text>
+    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">24 ottobre 2021, 18:45:56</mj-text>
+  </mj-column>
+</mj-section>

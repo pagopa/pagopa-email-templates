@@ -1,0 +1,65 @@
+<!-- dettaglio posizioni MOBILE -->
+<mj-section css-class="section" padding-bottom="0px" padding-top="0px">
+  <mj-column>
+
+    <!-- Debitore -->
+    <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+      <tr style="text-align:left; vertical-align: top;">
+        <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71; white-space: nowrap;">Debitore</td>
+        <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">Marzia Roccaraso (RCCMRZ88A52C409A)</td>
+      </tr>
+    </mj-table>
+
+    <!-- Ente creditore -->
+    <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+      <tr style="text-align:left; vertical-align: top;">
+        <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Ente creditore</td>
+        <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">Comune di Controguerra</td>
+      </tr>
+    </mj-table>
+
+    <!-- Codice Fiscale ente -->
+    <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+      <tr style="text-align:left; vertical-align: top;">
+        <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Codice Fiscale ente</td>
+        <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">82001760675</td>
+      </tr>
+    </mj-table>
+
+    <!-- IUV -->
+    <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+      <tr style="text-align:left; vertical-align: top;">
+        <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">IUV</td>
+        <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">12200709061180792</td>
+      </tr>
+    </mj-table>
+
+    <!-- Importo -->
+    <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+      <tr style="text-align:left; vertical-align: top;">
+        <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Importo</td>
+        <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">156,00&nbsp;&euro;</td>
+      </tr>
+    </mj-table>
+
+    <!-- Divider -->
+    <mj-divider padding-top="24px" padding-bottom="24px" border-width="1px" border-style="solid" border-color="lightgrey" />
+
+    <!-- Commissione -->
+    <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+      <tr style="text-align:left; vertical-align: top;">
+        <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Commissione (applicata da American Express Payment Services)</td>
+        <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">1&nbsp;&euro;</td>
+      </tr>
+    </mj-table>
+
+     <!-- Totale -->
+    <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+      <tr style="text-align:left; font-weight: bold; vertical-align: top;">
+        <td class="value" style="padding: 8px 0px; padding-right: 16px;">Totale</td>
+        <td class="value" style="padding: 8px 0px; text-align: right; white-space: nowrap;">151,00&nbsp;&euro;</td>
+      </tr>
+    </mj-table>
+
+  </mj-column>
+</mj-section>
