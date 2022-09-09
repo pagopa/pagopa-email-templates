@@ -8,9 +8,13 @@ body,
   background-color: #FFFFFF;
 }
 
-.container {
+.header {
   background-color: #FFFFFF;
   border-top: 8px solid #0073E6;
+}
+
+.section {
+  background-color: #FFFFFF;
 }
 
 .title div {
@@ -18,6 +22,16 @@ body,
 }
 
 .text div {
+  color: #17324D !important;
+}
+
+.key,
+.key div {
+  color: #5C6F82 !important;
+}
+
+.value,
+.value div {
   color: #17324D !important;
 }
 
@@ -30,7 +44,7 @@ body,
 }
 
 h4 {
-  margin-bottom: 0px;
+  margin: 0px;
 }
 
 p {
@@ -38,8 +52,8 @@ p {
   margin-bottom: 0px;
 }
 
-.circuito {
-  padding-right: 4px;
+.payment-method {
+  padding-right: 8px;
 }
 
 @media (min-width: 600px) {
@@ -63,9 +77,13 @@ p {
     background-color: #000000;
   }
 
-  .container {
+  .header {
     background-color: #323232;
     border-top: 8px solid #0073E6;
+  }
+
+  .section {
+    background-color: #323232;
   }
 
   .title div {
@@ -74,5 +92,15 @@ p {
 
   .text div {
     color: #EEEEEE !important;
+  }
+
+  .key,
+  .key div {
+    color: #EEEEEE !important;
+  }
+
+  .value,
+  .value div {
+    color: #FFFFFF !important;
   }
 }

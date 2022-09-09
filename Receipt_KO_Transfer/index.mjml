@@ -9,7 +9,7 @@
   <mj-body css-class="mail-body">
     <mj-include path="../style.css" type="css" />
     <mj-wrapper>
-      <mj-section css-class="container">
+      <mj-section css-class="header" padding-bottom="0">
         <mj-column>
           <!-- pagoPA Logo -->
           <mj-include path="../partials/main-logo.mjml" />
@@ -26,10 +26,10 @@
               Non &egrave; stato addebitato nessun importo sul metodo di pagamento utilizzato.
             </p>
           </mj-text>
-          <!-- Footer -->
-          <mj-include path="../partials/footer.mjml" />
         </mj-column>
       </mj-section>
+      <!-- Footer -->
+      <mj-include path="../partials/footer.mjml" />
     </mj-wrapper>
   </mj-body>
 </mjml>
