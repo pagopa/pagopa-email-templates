@@ -19,8 +19,8 @@
   <mj-column>
     <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Metodo di pagamento</mj-text>
     <mj-text css-class="value" color="#17324D" font-size="16px" line-height="16px" font-weight="bold" padding-top="4px" padding-bottom="8px">
-      <img src="../assets/methods/mastercard.png" width="24" align="left" alt="Logo Mastercard" aria-hidden="true" class="payment-method">
-      Mastercard *1234
+      <img src="../assets/methods/mastercard.png" width="24" align="left" alt="Logo Mastercard" aria-hidden="true">
+      &nbsp;Mastercard *1234
     </mj-text>
     <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Intestato a</mj-text>
     <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">Mario Rossi</mj-text>

@@ -57,10 +57,6 @@ p {
   margin-bottom: 0px;
 }
 
-.payment-method {
-  padding-right: 8px;
-}
-
 @media (min-width: 600px) {
   body,
   .mail-body {
