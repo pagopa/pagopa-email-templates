@@ -32,7 +32,7 @@
       <!-- Divider -->
       <mj-include path="../partials/divider.mjml" />
       <!-- Transaction User Data -->
-      <mj-include path="../partials/transaction_data.mjml" />
+      <mj-include path="../partials/transaction_data_legacy-method.mjml" />
       <!-- Divider -->
       <mj-include path="../partials/divider.mjml" />
       <!-- Transaction Detail -->
