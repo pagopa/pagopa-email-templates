@@ -39,6 +39,8 @@
       <mj-include path="../partials/transaction_detail.mjml" />
        <!-- Divider -->
       <mj-include path="../partials/divider.mjml" />
+      <!-- Bank Charges -->
+      <mj-include path="../partials/bank-charges-disclaimer.mjml" />
       <!-- Tax Deduction -->
       <mj-include path="../partials/tax-deduction.mjml" />
       <!-- Footer -->
