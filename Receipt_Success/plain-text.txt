@@ -1,0 +1,47 @@
+** Hai inviato un pagamento di 152,00 € tramite pagoPA **
+Il tuo pagamento è andato a buon fine. Ecco i dettagli dell'operazione.
+
+- - - - - - - - - - -
+
+Oggetto del pagamento:
+TARI 2022
+
+- - - - - - - - - - -
+
+Pagato da: Marzia Roccaraso (RCCMRZ88A52C409A)
+Indirizzo email: nome.cognome@pagopa.it
+ID transazione (RRN): 1234567890
+Codice autorizzativo: 9999999999
+Metodo di pagamento: Visa *1234
+Intestato a: Marzia Roccaraso
+Gestore della transazione (PSP): Nexi
+Data e ora: 24 ottobre 2022, 18:45:56
+
+- - - - - - - - - - -
+
+Debitore: Giuseppe Bianchi (BNCGSP70A12F205X)
+Ente creditore: Comune di Controguerra
+Codice fiscale Ente: 82001760675
+IUV: 12200709061180792
+Importo: 150,00
+
+Commissione (applicata da Nexi): 2,00 €
+
+Totale: 152,00 €
+
+- - - - - - - - - - -
+
+Poiché hai effettuato questo pagamento tramite uno strumento tracciabile, puoi usare questa e-mail come ricevuta per le tue detrazioni o deduzioni fiscali.
+
+- - - - - - - - - - -
+
+Serve aiuto?
+
+Contatta il servizio di assistenza all'indirizzo https://pagopa.gov.it/assistenza e comunica il codice transazione: F57E2F8E-25FF-4183-AB7B-4A5EC1A96644.
+
+Non rispondere a questa email. Questa casella di posta è utilizzata solo per l’invio della presente mail e, non essendo monitorata, non riceveresti risposta.
+
+- - - - - - - - - - -
+
+A presto,
+il team di pagoPA
