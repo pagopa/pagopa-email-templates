@@ -11,12 +11,11 @@
     <mj-wrapper>
       <mj-section css-class="header" padding-bottom="0">
         <mj-column>
-          <!-- pagoPA Logo -->
           <mj-include path="../partials/main-logo.mjml" />
           <!-- Title & Main Message -->
           <mj-text css-class="title" font-weight="bold" align="left">
             <h1 style="font-size: 32px; line-height: 40px; margin: 0;">
-              Ops! Il pagamento di 150,00 &euro; tramite pagoPA non &egrave; riuscito
+              Ops! Il pagamento di {{transaction.amount}} &euro; tramite pagoPA non &egrave; riuscito
             </h1>
           </mj-text>
           <mj-spacer height="8px" css-class="spacer" />

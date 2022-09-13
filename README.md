@@ -10,7 +10,24 @@ To edit them, you can choose among these following options:
 - [Local installation](https://mjml.io/download)
 - [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=mjmlio.vscode-mjml)
 
-The minified HTML output should be exported and committed with the template itself.
+To generate the HTML output you need to install these CLI tools:
+
+1. [MJML](https://github.com/keithamus/hbs-cli) package:
+
+```shell
+$ npm install --g mjml
+```
+
+2. [Handlebars CLI](https://github.com/keithamus/hbs-cli) to render handlebars templates:
+
+```shell
+$ npm install --g hbs-cli
+```
+
+For the specific commands, take in consideration the local README files:
+
+1. [Receipt · Success](/Receipt_Success/)
+1. [Receipt · KO](/Receipt_KO/)
 
 ## How to deploy changes
 
