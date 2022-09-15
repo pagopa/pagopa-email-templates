@@ -6,6 +6,7 @@
       <mj-all font-family="Titillium Web, Arial" />
     </mj-attributes>
     <mj-raw>
+      <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
       <meta name="color-scheme" content="light dark">
       <meta name="supported-color-schemes" content="light dark">
     </mj-raw>
@@ -19,7 +20,7 @@
           <!-- Title & Main Message -->
           <mj-text css-class="title" font-weight="bold" align="left">
             <h1 style="font-size: 32px; line-height: 40px; margin: 0;">
-              Ops! Il pagamento di {{transaction.amount}} &euro; tramite pagoPA non &egrave; riuscito
+              Ops! Il pagamento di {{transaction.amount}}&nbsp;&euro; tramite pagoPA non &egrave; riuscito
             </h1>
           </mj-text>
           <mj-spacer height="8px" css-class="spacer" />
