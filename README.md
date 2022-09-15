@@ -39,16 +39,16 @@ Templates are compatible with the following clients:
 
 - Apple Mail 13+ (dark mode included)
 - Gmail Web app
-- OL Office 365 (dark mode included)
-- Outlook 2013, 2016, 2019, 2021
-- Windows 10 Mail (dark mode included)
+- OL Office 365 (dark mode included, partially supported on Windows)
+- Outlook 2013, 2016, 2019, 2021 (dark mode included, partially supported on Windows)
+- Windows 10 Mail (dark mode partially supported)
 - Windows 11 Mail
-- Gmail App (Android 6+)
-- Gmail App (iOS 13.1+)
+- Gmail App (Android 6+, dark mode partially supported)
+- Gmail App (iOS 13.1+, dark mode partially supported)
 - iPad (iOS 13.1+)
 - iPhone (iOS 13.1+)
 - AOL Mail
-- Outlook.com Mail (dark mode included)
+- Outlook.com Mail (dark mode partially supported)
 - Yahoo! Mail
 
 ### Related mail templates

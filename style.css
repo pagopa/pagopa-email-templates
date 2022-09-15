@@ -10,7 +10,7 @@ body,
 
 .header {
   background-color: #FFFFFF;
-  border-top: 8px solid #0073E6;
+  border-top: 8px solid #0066CC;
 }
 
 .section {
@@ -57,6 +57,20 @@ p {
   margin-bottom: 0px;
 }
 
+@media (prefers-color-scheme: light) {
+  .dark-img,
+  [data-ogsc] .dark-img {
+    display:none !important;
+    mso-hide: all !important; 
+  }
+
+  .light-img,
+  [data-ogsc] .light-img {
+    display:block;
+    display:block !important;
+  }
+}
+
 @media (min-width: 600px) {
   body,
   .mail-body {
@@ -80,7 +94,7 @@ p {
 
   .header {
     background-color: #323232;
-    border-top: 8px solid #0073E6;
+    border-top: 8px solid #323232;
   }
 
   .section {
@@ -108,5 +122,27 @@ p {
   .value,
   .value div {
     color: #FFFFFF !important;
+  }
+
+  /* IMAGES */
+  /* Source: https://www.litmus.com/blog/the-ultimate-guide-to-dark-mode-for-email-marketers/ */
+
+  .dark-img,
+  [data-ogsc] .dark-img {
+    display:block !important;
+    overflow: visible !important;
+    float: none !important;
+    max-height:inherit !important;
+    max-width:inherit !important;
+    line-height: auto !important;
+    margin-top:0px !important;
+    visibility:inherit !important;
+  }
+
+  .light-img,
+  [data-ogsc] .light-img {
+    display:none;
+    display:none !important;
+    mso-hide: all !important; 
   }
 }
