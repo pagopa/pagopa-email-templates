@@ -34,8 +34,10 @@ $ hbs -H ./helpers/eq.js -H ./helpers/not.js --data ./guest.json -o ./ -e txt --
 
 ### Generate the HTML version:
 
-Update the original `mjml` file and generate the final HTML file through the following command:
+Update the original `mjml` file and generate the final HTML file through the following command, based on different user scenarios:
+
+#### Authenticated
 
 ```shell
-$ mjml index.mjml -o index.hbs --config.keepComments=0 && hbs --data ./ko.json -e html -- ./index.hbs
+$ mjml index.mjml -o index.hbs --config.keepComments=0 && hbs -H ./helpers/eq.js -H ./helpers/not.js --data ./authenticated.json -e html -- ./index.hbs
 ```

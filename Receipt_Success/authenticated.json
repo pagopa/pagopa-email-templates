@@ -12,8 +12,8 @@
     "rrn": "1234567890",
     "authCode": "9999999999",
     "paymentMethod": {
-      "name": "Visa *1234",
-      "logo": "https://...",
+      "name": "Mastercard *1234",
+      "logo": "../assets/methods/mastercard.png",
       "accountHolder": "Marzia Roccaraso",
       "extraFee": false
     }

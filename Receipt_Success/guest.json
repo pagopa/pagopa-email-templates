@@ -13,7 +13,7 @@
     "authCode": "9999999999",
     "paymentMethod": {
       "name": "Visa *1234",
-      "logo": "https://...",
+      "logo": "../assets/methods/visa.png",
       "accountHolder": "Marzia Roccaraso",
       "extraFee": false
     }

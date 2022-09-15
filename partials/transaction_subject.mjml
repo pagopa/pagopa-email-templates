@@ -1,6 +1,10 @@
 <mj-section css-class="section" padding-bottom="0px" padding-top="0px">
   <mj-column>
-    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="0px">Oggetto del pagamento</mj-text>
-    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="0px">TARI 2022</mj-text>
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="0px">
+      Oggetto del pagamento
+    </mj-text>
+    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="0px">
+      {{cart.items.[0].subject}}
+    </mj-text>
   </mj-column>
 </mj-section>

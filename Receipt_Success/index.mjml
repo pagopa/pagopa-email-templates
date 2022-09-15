@@ -16,7 +16,7 @@
           <!-- Title & Main Message -->
           <mj-text css-class="title" font-weight="bold" align="left">
             <h1 style="font-size: 32px; line-height: 40px; margin: 0;">
-              Hai inviato un pagamento di 151,00&nbsp;&euro; tramite pagoPA
+              Hai inviato un pagamento di {{transaction.amount}}&nbsp;&euro; tramite pagoPA
             </h1>
           </mj-text>
           <mj-spacer height="8px" css-class="spacer" />
@@ -28,7 +28,15 @@
         </mj-column>
       </mj-section>
       <!-- Transaction Subject -->
-      <mj-include path="../partials/transaction_subject.mjml" />
+      <mj-raw>
+        {{#eq cart.items.length 1}}
+          {{#if cart.items.[0].subject}}
+          </mj-raw>
+            <mj-include path="../partials/transaction_subject.mjml" />
+          <mj-raw>
+          {{/if}}
+        {{/eq}}
+      </mj-raw>
       <!-- Divider -->
       <mj-include path="../partials/divider.mjml" />
       <!-- Transaction User Data -->
@@ -40,9 +48,13 @@
        <!-- Divider -->
       <mj-include path="../partials/divider.mjml" />
       <!-- Bank Charges -->
-      <mj-include path="../partials/bank-charges-disclaimer.mjml" />
+      <mj-raw>{{#if transaction.paymentMethod.extraFee}}</mj-raw>
+        <mj-include path="../partials/bank-charges-disclaimer.mjml" />
+      <mj-raw>{{/if}}</mj-raw>
       <!-- Tax Deduction -->
-      <mj-include path="../partials/tax-deduction.mjml" />
+      <mj-raw>{{#if user.data.taxCode}}</mj-raw>
+        <mj-include path="../partials/tax-deduction.mjml" />
+      <mj-raw>{{/if}}</mj-raw>
       <!-- Footer -->
       <mj-include path="../partials/footer.mjml" />
     </mj-wrapper>
