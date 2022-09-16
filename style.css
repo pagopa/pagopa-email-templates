@@ -57,6 +57,10 @@ p {
   margin-bottom: 0px;
 }
 
+.link {
+  color: #0066CC !important;
+}
+
 @media (prefers-color-scheme: light) {
   .dark-img,
   [data-ogsc] .dark-img {
@@ -94,7 +98,7 @@ p {
 
   .header {
     background-color: #323232;
-    border-top: 8px solid #323232;
+    border-top: 8px solid #3DA2FF;
   }
 
   .section {
@@ -122,6 +126,10 @@ p {
   .value,
   .value div {
     color: #FFFFFF !important;
+  }
+
+  .link {
+    color: #3DA2FF !important;
   }
 
   /* IMAGES */
