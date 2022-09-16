@@ -56,7 +56,7 @@
       <mj-raw>{{#not @root.cart.items.length 1}}</mj-raw>
         <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
           <tr style="text-align:left; vertical-align: top;">
-            <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Oggetto del pagamento</td>
+            <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Oggetto</td>
             <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">{{this.subject}}</td>
           </tr>
         </mj-table>
