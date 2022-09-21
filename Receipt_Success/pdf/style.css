@@ -1,0 +1,86 @@
+:root {
+  --page-margin: 50px;
+  --debug-color: lightpink;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.page {
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
+  page-break-after: always;
+  width: 210mm;
+  height: 296mm;
+  padding: 10mm;
+}
+
+.page-wrapper {
+  position: relative;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 10mm;
+  background-color: white;
+}
+
+.logo {
+  width: 20mm;
+  height: auto;
+  margin-block-end: 5mm;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  font-size: 10pt;
+  bottom: 0;
+  padding-top: 5mm;
+  border-top: 0.35mm solid black;
+}
+
+footer > * {
+  margin: 0;
+}
+
+hr {
+  border: none;
+  margin-block-start: 5mm;
+  border-top: 0.4mm solid black;
+  margin-block-end: 5mm;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 5mm;
+}
+
+.data-key-value {
+  margin: 0;
+  padding: 0;
+  font-size: 11pt;
+}
+
+.data-key-value dt {
+  font-size: 11pt;
+  color: #5c5c5c;
+}
+
+.data-key-value dd {
+  margin: 0;
+}
+
+.debug {
+  background-color: var(--debug-color);
+}

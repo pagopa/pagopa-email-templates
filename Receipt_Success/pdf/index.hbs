@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <title>Il riepilogo del tuo pagamento</title>
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css">
+  <link href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" rel="stylesheet" type="text/css" />
+  <style type="text/css">
+    @import url(https://selfcare.pagopa.it/assets/font/selfhostedfonts.css);
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="page-wrapper">
+      <header>
+        <img class="logo" src="assets/logo-pagoPa.svg" />
+        {{#eq cart.items.length 1}}
+          {{#if cart.items.[0].subject}}
+            <dl class="data-key-value">
+              <dt>Oggetto del pagamento</dt>
+              <dd>{{cart.items.[0].subject}}</dd>
+            </dl>
+          {{/if}}
+        {{/eq}}
+        <hr />
+      </header>
+
+      <main>
+        <div class="content-grid">
+
+          <dl class="data-key-value">
+            <dt>Pagato</dt>
+            <dd>Marzia Roccaraso (RCCMRZ88A52C409A)</dd>
+          </dl>
+
+          <dl class="data-key-value">
+            <dt>Indirizzo email</dt>
+            <dd>nome.cognome@pagopa.it</dd>
+          </dl>
+
+          <dl class="data-key-value">
+            <dt>ID transazione (RRN)</dt>
+            <dd>1234567890</dd>
+          </dl>
+
+          <dl class="data-key-value">
+            <dt>Codice autorizzativo</dt>
+            <dd>1234567890123456800</dd>
+          </dl>
+
+          <dl class="data-key-value">
+            <dt>Metodo di pagamento</dt>
+            <dd>Visa *1234</dd>
+          </dl>
+
+          <dl class="data-key-value">
+            <dt>Intestato a</dt>
+            <dd>Maria Rossi</dd>
+          </dl>
+
+          <dl class="data-key-value">
+            <dt>Gestore della transazione (PSP)</dt>
+            <dd>American Express Payment Services</dd>
+          </dl>
+
+          <dl class="data-key-value">
+            <dt>Data e ora</dt>
+            <dd>24 ottobre 2022, 18:45:56</dd>
+          </dl>
+        </div>
+      </main>
+
+      <footer>
+        <h3>Serve aiuto?</h3>
+        <p>Contatta il servizio di assistenza e comunica il codice transazione:
+          <strong>F57E2F8E-25FF-4183-AB7B-4A5EC1A96644</strong>.
+        </p>
+      </footer>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
