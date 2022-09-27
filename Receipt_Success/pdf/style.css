@@ -49,7 +49,7 @@ footer {
   border-top: 0.35mm solid black;
 }
 
-footer > * {
+footer * {
   margin: 0;
 }
 
@@ -60,10 +60,30 @@ hr {
   margin-block-end: 5mm;
 }
 
-.content-grid {
+.transaction-data {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 5mm;
+  gap: 3mm;
+}
+
+.transaction-detail-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3mm;
+}
+
+.transaction-detail {
+  margin-block-start: 7mm;
+  padding-block-start: 7mm;
+  display: flex;
+  flex-direction: column;
+  border-top: 0.5mm solid black;
+}
+
+.transaction-detail > * + * {
+  border-top: 0.2mm solid black;
+  padding-top: 5mm;
+  margin-top: 5mm;
 }
 
 .data-key-value {
@@ -79,6 +99,10 @@ hr {
 
 .data-key-value dd {
   margin: 0;
+}
+
+.stack > * + * {
+  margin-top: 2mm;
 }
 
 .debug {

@@ -19,66 +19,180 @@
       <header>
         <img class="logo" src="assets/logo-pagoPa.svg" />
         {{#eq cart.items.length 1}}
-          {{#if cart.items.[0].subject}}
-            <dl class="data-key-value">
-              <dt>Oggetto del pagamento</dt>
-              <dd>{{cart.items.[0].subject}}</dd>
-            </dl>
-          {{/if}}
+        {{#if cart.items.[0].subject}}
+        <dl class="data-key-value">
+          <dt>Oggetto del pagamento</dt>
+          <dd>{{cart.items.[0].subject}}</dd>
+        </dl>
+        {{/if}}
         {{/eq}}
-        <hr />
       </header>
 
       <main>
         <div class="content-grid">
 
-          <dl class="data-key-value">
-            <dt>Pagato</dt>
-            <dd>Marzia Roccaraso (RCCMRZ88A52C409A)</dd>
+          <section class="transaction-data">
+
+            {{#with user.data}}
+            <dl class="data-key-value">
+              <dt>Pagato da</dt>
+              <dd>{{firstName}} {{lastName}} ({{taxCode}})</dd>
+            </dl>
+            {{/with}}
+
+
+            <dl class="data-key-value">
+              <dt>Indirizzo email</dt>
+              <dd>{{user.email}}</dd>
+            </dl>
+
+            <dl class="data-key-value">
+              <dt>ID transazione (RRN)</dt>
+              <dd>{{transaction.rrn}}</dd>
+            </dl>
+
+            <dl class="data-key-value">
+              <dt>Codice autorizzativo</dt>
+              <dd>{{transaction.authCode}}</dd>
+            </dl>
+
+            <dl class="data-key-value">
+              <dt>Metodo di pagamento</dt>
+              <dd>{{transaction.paymentMethod.name}}</dd>
+            </dl>
+
+            {{#if transaction.paymentMethod.accountHolder}}
+            <dl class="data-key-value">
+              <dt>Intestato a</dt>
+              <dd>{{transaction.paymentMethod.accountHolder}}</dd>
+            </dl>
+            {{/if}}
+
+            <dl class="data-key-value">
+              <dt>Gestore della transazione (PSP)</dt>
+              <dd>{{transaction.psp.name}}</dd>
+            </dl>
+
+            <dl class="data-key-value">
+              <dt>Data e ora</dt>
+              <dd>{{transaction.timestamp}}</dd>
+            </dl>
+
+          </section>
+
+          <section class="transaction-detail">
+
+            {{#each cart.items}}
+
+            <section class="transaction-detail-group">
+
+              <!-- Debitore -->
+              {{#with this.debtor}}
+              <dl class="data-key-value">
+                <dt>Debitore</dt>
+                <dd>{{fullName}} {{#if taxCode}}({{taxCode}}){{/if}}</dd>
+              </dl>
+              {{/with}}
+
+              <!-- Ente creditore -->
+              <dl class="data-key-value">
+                <dt>Ente creditore</dt>
+                <dd>{{this.payee.name}}</dd>
+              </dl>
+
+              <!-- Codice Fiscale ente -->
+              <dl class="data-key-value">
+                <dt>Codice Fiscale ente</dt>
+                <dd>{{this.payee.taxCode}}</dd>
+              </dl>
+
+              <!-- IUV -->
+              {{#eq this.refNumber.type "IUV"}}
+              <dl class="data-key-value">
+                <dt>IUV</dt>
+                <dd>{{this.refNumber.value}}</dd>
+              </dl>
+              {{/eq}}
+
+              <!-- Codice Avviso -->
+              {{#eq this.refNumber.type "codiceAvviso"}}
+              <dl class="data-key-value">
+                <dt>Codice avviso</dt>
+                <dd>{{this.refNumber.value}}</dd>
+              </dl>
+              {{/eq}}
+
+              <!-- Oggetto del pagamento -->
+              {{#not @root.cart.items.length 1}}
+              <dl class="data-key-value">
+                <dt>Oggetto</dt>
+                <dd>{{this.subject}}</dd>
+              </dl>
+              {{/not}}
+
+              <!-- Importo -->
+              <dl class="data-key-value">
+                <dt>Importo</dt>
+                <dd style="font-weight: bold; font-size: 150%;">{{this.amount}}&nbsp;&euro;</dd>
+              </dl>
+
+            </section>
+
+            {{/each}}
+
+          </section>
+
+          <!-- Partial Amount -->
+          {{#not cart.items.length 1}}
+          <dl style="margin-block-start: 5mm;" class="data-key-value">
+            <dt>Importo parziale</dt>
+            <dd style="font-weight: bold; font-size: 150%;">{{cart.amountPartial}}&nbsp;&euro;</dd>
+          </dl>
+          {{/not}}
+
+          <!-- Commissione -->
+          <dl style="margin-block-start: 2mm;" class="data-key-value">
+            <dt>Commissione (applicata da {{transaction.psp.name}})</dt>
+            <dd style="font-weight: bold; font-size: 150%;">{{transaction.psp.fee.amount}}&nbsp;&euro;</dd>
           </dl>
 
-          <dl class="data-key-value">
-            <dt>Indirizzo email</dt>
-            <dd>nome.cognome@pagopa.it</dd>
+          <!-- Totale -->
+          <dl style="margin-block-start: 5mm;" class="data-key-value">
+            <dt>Totale</dt>
+            <dd style="font-weight: bold; font-size: 250%;">{{transaction.amount}}&nbsp;&euro;</dd>
           </dl>
 
-          <dl class="data-key-value">
-            <dt>ID transazione (RRN)</dt>
-            <dd>1234567890</dd>
-          </dl>
+          <!-- Bank Charges -->
+          {{#if transaction.paymentMethod.extraFee}}
+          <p>Il totale non include eventuali costi di invio bonifico, se applicati dal gestore della transazione (PSP).
+            Per maggiori informazioni, rivolgiti alla tua banca.
+          </p>
+          {{/if}}
 
-          <dl class="data-key-value">
-            <dt>Codice autorizzativo</dt>
-            <dd>1234567890123456800</dd>
-          </dl>
 
-          <dl class="data-key-value">
-            <dt>Metodo di pagamento</dt>
-            <dd>Visa *1234</dd>
-          </dl>
 
-          <dl class="data-key-value">
-            <dt>Intestato a</dt>
-            <dd>Maria Rossi</dd>
-          </dl>
-
-          <dl class="data-key-value">
-            <dt>Gestore della transazione (PSP)</dt>
-            <dd>American Express Payment Services</dd>
-          </dl>
-
-          <dl class="data-key-value">
-            <dt>Data e ora</dt>
-            <dd>24 ottobre 2022, 18:45:56</dd>
-          </dl>
         </div>
       </main>
 
       <footer>
-        <h3>Serve aiuto?</h3>
-        <p>Contatta il servizio di assistenza e comunica il codice transazione:
-          <strong>F57E2F8E-25FF-4183-AB7B-4A5EC1A96644</strong>.
-        </p>
+        <section class="stack">
+          <div>
+            <h3>Serve aiuto?</h3>
+            <p>Contatta il servizio di assistenza e comunica il codice transazione:
+              <strong>{{transaction.id}}</strong>.
+            </p>
+          </div>
+
+          {{#if user.data.taxCode}}
+          <div>
+            <p>
+              Poiché hai effettuato questo pagamento tramite uno strumento tracciabile, puoi usare questa e-mail
+              come ricevuta per le tue detrazioni o deduzioni fiscali.
+            </p>
+          </div>
+          {{/if}}
+
+        </section>
       </footer>
     </div>
 
