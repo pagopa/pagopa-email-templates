@@ -40,6 +40,12 @@ body,
   color: #17324D !important;
 }
 
+.mail-address,
+.mail-address div {
+  word-break: break-all;
+  color: #17324D !important;
+}
+
 .mobile {
   display: block;
 }
@@ -128,6 +134,11 @@ p {
 
   .value,
   .value div {
+    color: #ffffff !important;
+  }
+
+  .mail-address,
+  .mail-address div {
     color: #ffffff !important;
   }
 

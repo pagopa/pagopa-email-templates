@@ -16,7 +16,7 @@
 
     <!-- Email address -->
     <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Indirizzo email</mj-text>
-    <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">{{user.email}}</mj-text>
+    <mj-text css-class="mail-address" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">{{user.email}}</mj-text>
 
     <!-- RRN -->
     <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">ID transazione (RRN)</mj-text>
