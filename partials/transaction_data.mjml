@@ -48,11 +48,11 @@
     <mj-raw>{{/if}}</mj-raw>
 
     <!-- PSP -->
-    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px"padding-top="8px">Gestore della transazione (PSP)</mj-text>
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Gestore della transazione (PSP)</mj-text>
     <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">{{transaction.psp.name}}</mj-text>
 
     <!-- Date & Time -->
-    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px"padding-top="8px" >Data e ora</mj-text>
+    <mj-text css-class="key" font-size="16px" line-height="20px" padding-bottom="0px" padding-top="8px">Data e ora</mj-text>
     <mj-text css-class="value" color="#17324D" font-size="16px" line-height="20px" font-weight="bold" padding-top="4px" padding-bottom="8px">{{transaction.timestamp}}</mj-text>
 
   </mj-column>

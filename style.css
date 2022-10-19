@@ -3,7 +3,7 @@
   supported-color-schemes: light dark;
 }
 
-body, 
+body,
 .mail-body {
   background-color: #FFFFFF;
 }
@@ -58,24 +58,26 @@ p {
 }
 
 .link {
-  color: #0066CC !important;
+  color: #0066cc !important;
 }
 
 @media (prefers-color-scheme: light) {
+
   .dark-img,
   [data-ogsc] .dark-img {
-    display:none !important;
-    mso-hide: all !important; 
+    display: none !important;
+    mso-hide: all !important;
   }
 
   .light-img,
   [data-ogsc] .light-img {
-    display:block;
-    display:block !important;
+    display: block;
+    display: block !important;
   }
 }
 
 @media (min-width: 600px) {
+
   body,
   .mail-body {
     background-color: #e6e9f2;
@@ -91,6 +93,7 @@ p {
 }
 
 @media (prefers-color-scheme: dark) {
+
   body,
   .mail-body {
     background-color: #000000;
@@ -98,7 +101,7 @@ p {
 
   .header {
     background-color: #323232;
-    border-top: 8px solid #3DA2FF;
+    border-top: 8px solid #3da2ff;
   }
 
   .section {
@@ -106,30 +109,30 @@ p {
   }
 
   .title div {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
   }
 
   .text div {
-    color: #EEEEEE !important;
+    color: #eeeeee !important;
   }
 
   .caption,
   .caption div {
-    color: #EEEEEE !important;
+    color: #eeeeee !important;
   }
 
   .key,
   .key div {
-    color: #EEEEEE !important;
+    color: #eeeeee !important;
   }
 
   .value,
   .value div {
-    color: #FFFFFF !important;
+    color: #ffffff !important;
   }
 
   .link {
-    color: #3DA2FF !important;
+    color: #3da2ff !important;
   }
 
   /* IMAGES */
@@ -137,20 +140,20 @@ p {
 
   .dark-img,
   [data-ogsc] .dark-img {
-    display:block !important;
+    display: block !important;
     overflow: visible !important;
     float: none !important;
-    max-height:inherit !important;
-    max-width:inherit !important;
+    max-height: inherit !important;
+    max-width: inherit !important;
     line-height: auto !important;
-    margin-top:0px !important;
-    visibility:inherit !important;
+    margin-top: 0px !important;
+    visibility: inherit !important;
   }
 
   .light-img,
   [data-ogsc] .light-img {
-    display:none;
-    display:none !important;
-    mso-hide: all !important; 
+    display: none;
+    display: none !important;
+    mso-hide: all !important;
   }
 }
