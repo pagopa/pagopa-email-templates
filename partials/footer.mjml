@@ -12,8 +12,8 @@
     </mj-text>
     <mj-spacer height="8px" css-class="spacer" />
     <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular">
-        <p>
-        Non rispondere a questa email. Questa casella di posta &egrave; utilizzata solo per l&rsquo;invio della presente mail e, non essendo monitorata, non riceveresti risposta.
+      <p>
+        Non rispondere a questo indirizzo email: &egrave; utilizzato solo per l'invio di questa comunicazione e, non essendo monitorato, non riceveresti risposta.
       </p>
     </mj-text>
     <mj-spacer height="8px" css-class="spacer" />
