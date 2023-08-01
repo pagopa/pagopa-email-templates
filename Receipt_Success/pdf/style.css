@@ -1,12 +1,15 @@
 :root {
   --page-margin: 50px;
+  /* Fonts */
+  --font-monospaced: 'DM Mono', monospace;
   /* Colors */
   --debug-color: lightpink;
   --primary-color: #0000000;
   --secondary-color: #5C6F82;
   /* Font sizes */
-  --title-fsize: 18px;
-  --caption-fsize: 12px;
+  --title-fsize: 10pt;
+  --entity-fsize: 12pt;
+  --caption-fsize: 9pt;
 }
 
 body {
@@ -32,7 +35,7 @@ body {
   display: flex;
   height: 100%;
   flex-direction: column;
-  gap: 10mm;
+  gap: 5mm;
   background-color: white;
 }
 
@@ -44,11 +47,11 @@ body {
 .pagopa-header {
   display: flex;
   align-items: flex-start;
-  gap: 32px;
+  gap: 5mm;
 }
 
 .logo {
-  width: 20mm;
+  width: 18mm;
   height: auto;
 }
 
@@ -56,6 +59,7 @@ body {
   margin: 0;
   text-transform: uppercase;
   color: var(--primary-color);
+  font-weight: 700;
   font-size: var(--title-fsize);
 }
 
@@ -110,8 +114,14 @@ hr {
 
 .transaction-data {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 3mm;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8mm;
+}
+
+.transaction-data-group {
+  display: grid;
+  align-content: flex-start;
+  row-gap: 2mm;
 }
 
 .transaction-detail-group {
@@ -141,12 +151,51 @@ hr {
 }
 
 .data-key-value dt {
-  font-size: 11pt;
-  color: #5c5c5c;
+  font-size: var(--caption-fsize);
+  color: var(--primary-color);
 }
 
 .data-key-value dd {
   margin: 0;
+}
+
+.entityGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.entityName {
+  font-weight: 700;
+  font-size: var(--entity-fsize);
+  color: var(--primary-color);
+}
+
+.entityCode {
+  font-weight: 500;
+  font-family: var(--font-monospaced);
+}
+
+.entityName+.entityCode {
+  margin-top: -0.1em;
+}
+
+.payment-method-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5mm;
+  margin-top: 0.1em;
+}
+
+.payment-method-logo {
+  max-width: 5mm;
+  max-height: 5mm;
+}
+
+.data-key-value .data-value-big {
+  font-weight: 700;
+  font-size: var(--entity-fsize);
+  color: var(--primary-color);
+  margin-top: -0.2em;
 }
 
 .stack>*+* {

@@ -7,6 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css">
   <link href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&display=swap" rel="stylesheet">
   <style type="text/css">
     @import url(https://selfcare.pagopa.it/assets/font/selfhostedfonts.css);
   </style>
@@ -27,56 +30,67 @@
         </dl>
       </header>
 
-      <dl class="data-key-value">
-        <dt>Oggetto del pagamento</dt>
-        <dd>TARI 2022</dd>
-      </dl>
-
       <main>
         <div class="content-grid">
 
           <section class="transaction-data">
 
-            <dl class="data-key-value">
-              <dt>Pagato da</dt>
-              <dd>Marzia Roccaraso (RCCMRZ88A52C409A)</dd>
-            </dl>
+            <section class="transaction-data-group">
+
+              <dl class="data-key-value">
+                <dt>Pagato da</dt>
+                <dd class="entityGroup">
+                  <span class="entityName">Marzia Roccaraso</span>
+                  <span class="entityCode">RCCMRZ88A52C409A</span>
+                </dd>
+              </dl>
 
 
-            <dl class="data-key-value">
-              <dt>Indirizzo email</dt>
-              <dd>nome.cognome@pagopa.it</dd>
-            </dl>
+              <dl class="data-key-value">
+                <dt>Indirizzo email</dt>
+                <dd class="data-value-big">nome.cognome@pagopa.it</dd>
+              </dl>
 
-            <dl class="data-key-value">
-              <dt>ID transazione (RRN)</dt>
-              <dd>1234567890</dd>
-            </dl>
+              <dl class="data-key-value">
+                <dt>RRN</dt>
+                <dd class="entityCode">1234567890</dd>
+              </dl>
 
-            <dl class="data-key-value">
-              <dt>Codice autorizzativo</dt>
-              <dd>9999999999</dd>
-            </dl>
+              <dl class="data-key-value">
+                <dt>Codice autorizzativo</dt>
+                <dd class="entityCode">1234567890123456800</dd>
+              </dl>
 
-            <dl class="data-key-value">
-              <dt>Metodo di pagamento</dt>
-              <dd>Mastercard *1234</dd>
-            </dl>
+            </section>
 
-            <dl class="data-key-value">
-              <dt>Intestato a</dt>
-              <dd>Marzia Roccaraso</dd>
-            </dl>
+            <section class="transaction-data-group">
 
-            <dl class="data-key-value">
-              <dt>Gestore della transazione (PSP)</dt>
-              <dd>Nexi</dd>
-            </dl>
+              <dl class="data-key-value">
+                <dt>Metodo di pagamento</dt>
+                <dd class="data-value-big">
+                  <div class="payment-method-group">
+                    <img class="payment-method-logo" src=assets/mastercard.png />
+                    Carta Mastercard
+                  </div>
+                </dd>
+              </dl>
 
-            <dl class="data-key-value">
-              <dt>Data e ora</dt>
-              <dd>24 ottobre 2022, 18:45:56</dd>
-            </dl>
+              <dl class="data-key-value">
+                <dt>Intestato a</dt>
+                <dd class="data-value-big">Marzia Roccaraso</dd>
+              </dl>
+
+              <dl class="data-key-value">
+                <dt>Gestore della transazione (PSP)</dt>
+                <dd class="data-value-big">Nexi</dd>
+              </dl>
+
+              <dl class="data-key-value">
+                <dt>Data e ora</dt>
+                <dd class="data-value-big">24 ottobre 2022, 18:45:56</dd>
+              </dl>
+
+            </section>
 
           </section>
 
@@ -144,6 +158,11 @@
 
         </div>
       </main>
+
+      <dl class="data-key-value">
+        <dt>Oggetto del pagamento</dt>
+        <dd>TARI 2022</dd>
+      </dl>
 
       <footer>
         <section class="stack">
