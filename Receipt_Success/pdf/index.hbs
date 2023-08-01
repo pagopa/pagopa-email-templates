@@ -16,17 +16,25 @@
   <div class="page">
 
     <div class="page-wrapper">
-      <header>
-        <img class="logo" src="assets/logo-pagoPa.svg" />
-        {{#eq cart.items.length 1}}
-        {{#if cart.items.[0].subject}}
-        <dl class="data-key-value">
-          <dt>Oggetto del pagamento</dt>
-          <dd>{{cart.items.[0].subject}}</dd>
+      <header class="page-header">
+        <section class="pagopa-header">
+          <img class="logo" src="assets/logo-pagoPa.svg" />
+          <h1 class="title">Ricevuta di pagamento</h1>
+        </section>
+        <dl class="psp-header">
+          <dt>Emessa da</dt>
+          <dd><img class="psp-logo" src="assets/nexi-logo.png" /></dd>
         </dl>
-        {{/if}}
-        {{/eq}}
       </header>
+
+      {{#eq cart.items.length 1}}
+      {{#if cart.items.[0].subject}}
+      <dl class="data-key-value">
+        <dt>Oggetto del pagamento</dt>
+        <dd>{{cart.items.[0].subject}}</dd>
+      </dl>
+      {{/if}}
+      {{/eq}}
 
       <main>
         <div class="content-grid">

@@ -1,6 +1,12 @@
 :root {
   --page-margin: 50px;
+  /* Colors */
   --debug-color: lightpink;
+  --primary-color: #0000000;
+  --secondary-color: #5C6F82;
+  /* Font sizes */
+  --title-fsize: 18px;
+  --caption-fsize: 12px;
 }
 
 body {
@@ -30,10 +36,52 @@ body {
   background-color: white;
 }
 
+.page-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pagopa-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
+
 .logo {
   width: 20mm;
   height: auto;
-  margin-block-end: 5mm;
+}
+
+.title {
+  margin: 0;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  font-size: var(--title-fsize);
+}
+
+/* PSP present in the top area of the page */
+.psp-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2mm;
+  margin: 0;
+}
+
+/* Emessa da: */
+.psp-header dt {
+  text-align: right;
+  font-size: var(--caption-fsize);
+  color: var(--secondary-color);
+}
+
+/* PSP Logo */
+.psp-header dd {
+  margin: 0;
+}
+
+.psp-logo {
+  height: 6mm;
+  width: auto;
 }
 
 main {
@@ -80,7 +128,7 @@ hr {
   border-top: 0.5mm solid black;
 }
 
-.transaction-detail > * + * {
+.transaction-detail>*+* {
   border-top: 0.2mm solid black;
   padding-top: 5mm;
   margin-top: 5mm;
@@ -101,7 +149,7 @@ hr {
   margin: 0;
 }
 
-.stack > * + * {
+.stack>*+* {
   margin-top: 2mm;
 }
 
