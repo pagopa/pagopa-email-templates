@@ -194,32 +194,44 @@
 
       {{#eq cart.items.length 1}}
       {{#if cart.items.[0].subject}}
-      <dl class="data-key-value">
+      <!-- <dl class="data-key-value">
         <dt>Oggetto del pagamento</dt>
         <dd>{{cart.items.[0].subject}}</dd>
-      </dl>
+      </dl> -->
       {{/if}}
       {{/eq}}
 
       <footer>
-        <section class="stack">
-          <div>
-            <h3>Serve aiuto?</h3>
-            <p>Contatta il servizio di assistenza e comunica il codice transazione:
-              <strong>{{transaction.id}}</strong>.
-            </p>
-          </div>
 
-          {{#if user.data.taxCode}}
-          <div>
+
+        {{#if user.data.taxCode}}
+        <p class="small">
+          Poiché hai effettuato questo pagamento tramite uno strumento tracciabile, puoi usare questa ricevuta per
+          le tue detrazioni o deduzioni fiscali.
+        </p>
+        {{/if}}
+
+        <div class="company-info">
+          <div class="pagopa-company-address">
+            <p><strong>Ricevuta trasmessa da PagoPA S.p.A.</strong></p>
             <p>
-              Poiché hai effettuato questo pagamento tramite uno strumento tracciabile, puoi usare questa e-mail
-              come ricevuta per le tue detrazioni o deduzioni fiscali.
+              Piazza Colonna, 370<br />
+              00187, Roma
             </p>
           </div>
-          {{/if}}
+          <div class="psp-company-address">
+            <p><strong>Pagamento gestito da Nexi Payments S.p.A.</strong></p>
+            <p>
+              Corso Sempione, 55<br />
+              20149, Milano
+            </p>
+          </div>
+        </div>
 
-        </section>
+        <p class="small">Serve aiuto? Visita <strong><u>pagopa.gov.it/assistenza</u></strong> e comunica l'ID:
+          <strong class="transaction-id">{{transaction.id}}</strong>.
+        </p>
+
       </footer>
     </div>
 

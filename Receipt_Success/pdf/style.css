@@ -6,6 +6,7 @@
   --debug-color: lightpink;
   --primary-color: #0000000;
   --secondary-color: #5C6F82;
+  --divider-color: #E3E7EB;
   /* Font sizes */
   --title-fsize: 10pt;
   --entity-fsize: 12pt;
@@ -78,6 +79,10 @@ body {
   color: var(--secondary-color);
 }
 
+.small {
+  font-size: var(--caption-fsize);
+}
+
 /* PSP Logo */
 .psp-header dd {
   margin: 0;
@@ -98,11 +103,24 @@ footer {
   font-size: 10pt;
   bottom: 0;
   padding-top: 5mm;
-  border-top: 0.35mm solid black;
+  color: var(--secondary-color);
+  display: grid;
+  row-gap: 4mm;
 }
 
 footer * {
   margin: 0;
+}
+
+.transaction-id {
+  font-family: var(--font-monospaced);
+  font-weight: 500;
+}
+
+.company-info {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  align-content: flex-start;
 }
 
 hr {
@@ -135,7 +153,7 @@ hr {
   padding-block-start: 7mm;
   display: flex;
   flex-direction: column;
-  border-top: 0.5mm solid black;
+  border-top: 0.5mm solid #E3E7EB;
 }
 
 .transaction-detail>*+* {
