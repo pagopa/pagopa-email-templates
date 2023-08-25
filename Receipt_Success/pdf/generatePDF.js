@@ -9,7 +9,7 @@ const transactionID = 'F57E2F8E-25FF-4183-AB7B-4A5EC1A96644';
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  const htmlFile = path.resolve('index.html');
+  const htmlFile = path.resolve('template.html');
 
   await page.goto(`file://${htmlFile}`, { waitUntil: 'networkidle2' });
   await page.pdf({

@@ -4,7 +4,7 @@
   "description": "Template used to generate pagoPA PDF receipts",
   "main": "index.js",
   "scripts": {
-    "generate": "hbs -H ../helpers/eq.js -H ../helpers/not.js --data ../json/authenticated-pdf.json -e html -- ./index.hbs && node generatePDF"
+    "generate": "hbs -H ../helpers/eq.js -H ../helpers/not.js --data ../json/authenticated-pdf.json -e html -- ./template.hbs && node generatePDF"
   },
   "license": "ISC",
   "dependencies": {
