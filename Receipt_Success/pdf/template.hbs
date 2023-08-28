@@ -48,25 +48,39 @@
               {{/with}}
 
 
+              {{#if user.email}}
               <dl class="data-key-value">
                 <dt>Indirizzo email</dt>
                 <dd class="data-value-big">{{user.email}}</dd>
               </dl>
+              {{/if}}
 
+              {{#if transaction.rrn}}
               <dl class="data-key-value">
                 <dt>RRN</dt>
                 <dd class="entityCode">{{transaction.rrn}}</dd>
               </dl>
+              {{/if}}
 
+              {{#if transaction.authCode}}
               <dl class="data-key-value">
                 <dt>Codice autorizzativo</dt>
                 <dd class="entityCode">{{transaction.authCode}}</dd>
               </dl>
+              {{/if}}
+
+              {{#if transaction.requestedByDebtor}}
+              <dl class="data-key-value">
+                <dt>Gestore della transazione (PSP)</dt>
+                <dd class="data-value-big">{{transaction.psp.name}}</dd>
+              </dl>
+              {{/if}}
 
             </section>
 
             <section class="transaction-data-group">
 
+              {{#if transaction.paymentMethod.name}}
               <dl class="data-key-value">
                 <dt>Metodo di pagamento</dt>
                 <dd class="data-value-big">
@@ -76,6 +90,7 @@
                   </div>
                 </dd>
               </dl>
+              {{/if}}
 
               {{#if transaction.paymentMethod.accountHolder}}
               <dl class="data-key-value">
@@ -84,10 +99,12 @@
               </dl>
               {{/if}}
 
+              {{#unless transaction.requestedByDebtor}}
               <dl class="data-key-value">
                 <dt>Gestore della transazione (PSP)</dt>
                 <dd class="data-value-big">{{transaction.psp.name}}</dd>
               </dl>
+              {{/unless}}
 
               <dl class="data-key-value">
                 <dt>Data e ora</dt>
