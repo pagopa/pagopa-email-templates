@@ -6,11 +6,18 @@
   --debug-color: lightpink;
   --primary-color: #0000000;
   --secondary-color: #5C6F82;
+  /* Divider */
   --divider-color: #E3E7EB;
+  --divider-width: 0.5mm;
+  --divider-margin: 7mm;
   /* Font sizes */
+  --caption-fsize: 9pt;
   --title-fsize: 10pt;
   --entity-fsize: 12pt;
-  --caption-fsize: 9pt;
+  --huge-fsize: 16pt;
+  /* Transaction amount margin,
+  below payment code */
+  --amount-value-margin: 5mm;
 }
 
 body {
@@ -80,10 +87,6 @@ body {
   color: var(--secondary-color);
 }
 
-.small {
-  font-size: var(--caption-fsize);
-}
-
 /* PSP Logo */
 .psp-header dd {
   margin: 0;
@@ -98,12 +101,25 @@ main {
   flex: 1 0 auto;
 }
 
+/* Transaction Detail */
+
+.right-align {
+  text-align: right;
+}
+
+.paymentSubject {
+  margin: 0;
+  font-size: var(--title-fsize);
+  text-transform: uppercase;
+}
+
 footer {
   flex-shrink: 0;
   width: 100%;
   font-size: 10pt;
   bottom: 0;
   padding-top: 5mm;
+  font-size: var(--caption-fsize);
   color: var(--secondary-color);
   display: grid;
   row-gap: 4mm;
@@ -143,30 +159,84 @@ hr {
   row-gap: 2mm;
 }
 
+.transaction-detail-divider {
+  width: 100%;
+  border-top: var(--divider-width) solid var(--divider-color);
+  margin-block-start: var(--divider-margin);
+  margin-block-end: var(--divider-margin);
+}
+
 .transaction-detail-group {
   display: grid;
+  grid-template-areas:
+    "paymentSubject paymentSubject paymentSubject"
+    "debtor creditor paymentData";
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3mm;
 }
 
-.transaction-detail {
-  margin-block-start: 7mm;
-  padding-block-start: 7mm;
-  display: flex;
-  flex-direction: column;
-  border-top: 0.5mm solid #E3E7EB;
+.transaction-detail-paymentSubject {
+  grid-area: paymentSubject;
 }
 
-.transaction-detail>*+* {
-  border-top: 0.2mm solid black;
-  padding-top: 5mm;
-  margin-top: 5mm;
+.transaction-detail-debtor {
+  grid-area: debtor;
+}
+
+.transaction-detail-creditor {
+  grid-area: creditor;
+}
+
+.transaction-detail-paymentData {
+  grid-area: paymentData;
+}
+
+.transaction-detail {
+  margin-block-start: var(--divider-margin);
+  padding-block-start: var(--divider-margin);
+  display: flex;
+  flex-direction: column;
+  border-top: var(--divider-width) solid var(--divider-color);
+}
+
+.transaction-summary {
+  margin: 0;
+  display: grid;
+  gap: 3mm;
+}
+
+.transaction-summary-key-value {
+  margin: 0;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 9fr 3fr;
+  line-height: 1;
+  /* Avoid extra-space above/below */
+}
+
+.transaction-summary-key-value dt {
+  text-align: right;
+  font-size: var(--caption-fsize)
+}
+
+.transaction-summary-key-value dd {
+  text-align: right;
+  margin: 0;
+  font-weight: 700;
+}
+
+.transaction-summary-key-value.total-amount dt {
+  font-weight: 700;
+}
+
+.transaction-summary-key-value.total-amount dd {
+  font-weight: 700;
+  font-size: var(--huge-fsize);
 }
 
 .data-key-value {
   margin: 0;
   padding: 0;
-  font-size: 11pt;
 }
 
 .data-key-value dt {
@@ -178,19 +248,32 @@ hr {
   margin: 0;
 }
 
+.data-key-value.small dd {
+  font-size: var(--title-fsize);
+}
+
+.amount-value {
+  margin-block-start: var(--amount-value-margin);
+}
+
+.amount-value dd {
+  font-weight: 700;
+}
+
 .entityGroup {
   display: flex;
   flex-direction: column;
+  font-size: var(--entity-fsize);
 }
 
 .entityName {
   font-weight: 700;
-  font-size: var(--entity-fsize);
   color: var(--primary-color);
 }
 
 .entityCode {
   font-weight: 500;
+  font-size: var(--title-fsize);
   font-family: var(--font-monospaced);
 }
 
