@@ -20,6 +20,10 @@
   --amount-value-margin: 5mm;
 }
 
+* {
+  text-rendering: geometricprecision !important;
+}
+
 body {
   margin: 0;
   padding: 0;
