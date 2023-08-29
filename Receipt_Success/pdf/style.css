@@ -250,6 +250,7 @@ hr {
 
 .data-key-value dd {
   margin: 0;
+  line-height: 1.2;
 }
 
 .data-key-value.small dd {
@@ -282,7 +283,7 @@ hr {
 }
 
 .entityName+.entityCode {
-  margin-top: -0.1em;
+  margin-top: 0.1em;
 }
 
 .payment-method-group {
