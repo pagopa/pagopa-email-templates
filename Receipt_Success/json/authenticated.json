@@ -13,7 +13,7 @@
     "authCode": "9999999999",
     "paymentMethod": {
       "name": "Mastercard *1234",
-      "logo": "../assets/methods/mastercard.png",
+      "logo": "https://assets.cdn.platform.pagopa.it/creditcard/mastercard.png",
       "accountHolder": "Marzia Roccaraso",
       "extraFee": false
     }

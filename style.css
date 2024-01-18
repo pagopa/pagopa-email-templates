@@ -40,6 +40,12 @@ body,
   color: #17324D !important;
 }
 
+.centered-text {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  display: inline-block;
+}
+
 .mail-address,
 .mail-address div {
   word-break: break-all;
