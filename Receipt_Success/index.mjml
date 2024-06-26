@@ -56,10 +56,6 @@
       <mj-raw>{{#if transaction.paymentMethod.extraFee}}</mj-raw>
         <mj-include path="../partials/bank-charges-disclaimer.mjml" />
       <mj-raw>{{/if}}</mj-raw>
-      <!-- Tax Deduction -->
-      <mj-raw>{{#if user.data.taxCode}}</mj-raw>
-        <mj-include path="../partials/tax-deduction.mjml" />
-      <mj-raw>{{/if}}</mj-raw>
       <!-- Footer -->
       <mj-include path="../partials/footer.mjml" />
     </mj-wrapper>
