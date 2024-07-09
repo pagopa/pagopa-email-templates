@@ -33,6 +33,9 @@ For the specific commands, take in consideration the local README files:
 
 All the mail are sent through [pagopa-notifications-service](https://github.com/pagopa/pagopa-notifications-service).
 
+## PDF Receipt
+If you're looking for the relative PDF receipt, please refer to the [pagopa-template-receipt-pdf](https://github.com/pagopa/pagopa-template-receipt-pdf)
+
 ## Compatibility
 
 Templates are compatible with the following clients:

@@ -10,20 +10,15 @@
       }
     },
     "rrn": "1234567890",
-    "authCode": "9999999999",
+    "authCode": "1234567890123456800",
     "paymentMethod": {
-      "name": "Mastercard *1234",
-      "logo": "https://assets.cdn.platform.pagopa.it/creditcard/mastercard.png",
+      "name": "Carta Mastercard",
+      "logo": "assets/mastercard.png",
       "accountHolder": "Marzia Roccaraso",
       "extraFee": false
     }
   },
   "user": {
-    "data": {
-      "firstName": "Marzia",
-      "lastName": "Roccaraso",
-      "taxCode": "RCCMRZ88A52C409A"
-    },
     "email": "nome.cognome@pagopa.it"
   },
   "cart": {
@@ -31,7 +26,7 @@
       {
         "refNumber": {
           "type": "codiceAvviso",
-          "value": "123456789012345678"
+          "value": "1234 5678 9012 3456 78"
         },
         "debtor": {
           "fullName": "Giuseppe Bianchi",
@@ -41,7 +36,7 @@
           "name": "Comune di Controguerra",
           "taxCode": 82001760675
         },
-        "subject": "TARI 2022",
+        "subject": "Pagamento Retta Scolastica 2024 Istituto Comprensivo &quot;Leonardo Da Vinci&quot; Grosseto",
         "amount": "150,00"
       }
     ]

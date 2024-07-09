@@ -1,9 +1,0 @@
-<mj-section css-class="section" padding-bottom="8px" padding-top="8px">
-  <mj-column>
-    <mj-text css-class="caption" font-size="14px" line-height="20px" font-weight="regular" padding-top="0px" padding-bottom="0px">
-      <p>
-        Poich&eacute; hai effettuato questo pagamento tramite uno strumento tracciabile, puoi usare questa e-mail come ricevuta per le tue detrazioni o deduzioni fiscali.
-      </p>
-    </mj-text>
-  </mj-column>
-</mj-section>
