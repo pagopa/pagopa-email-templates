@@ -1,4 +1,4 @@
-** Ops! Il pagamento di 300,00 € tramite pagoPA non è riuscito **
+** Ops! Il pagamento di 350,00 € tramite pagoPA non è riuscito **
 
 Il tuo pagamento non è andato a buon fine.
 Non è stato addebitato nessun importo sul metodo di pagamento utilizzato.

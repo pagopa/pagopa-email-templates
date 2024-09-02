@@ -15,7 +15,7 @@ const txtVersionArgIndex = args.indexOf('--txtVersion');
 const txtVersion = txtVersionArgIndex > -1;
 
 if (!templateDir) {
-  console.error('Error: --templateDir argument is required');
+  console.error('HBS · Error: --templateDir argument is required');
   process.exit(1);
 }
 
@@ -53,4 +53,4 @@ const outputFilePath = path.join(templateDir, outputFilename);
 // Write the compiled HTML to the output file
 fs.writeFileSync(outputFilePath, htmlOutput, 'utf8');
 
-console.log(`Compiled Handlebars template written to ${outputFilePath}`);
+console.log(`HBS · Compiled Handlebars template written to ${outputFilePath}`);

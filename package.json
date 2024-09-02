@@ -7,8 +7,8 @@
   "license": "EUPL-1.2",
   "type": "module",
   "scripts": {
-    "generateReceiptKO-txt": "node compileHandlebars.js --templateDir Receipt_KO --data ko.json --txtVersion",
-    "generateReceiptKO": "node compileMjml.js --templateDir Receipt_KO && node compileHandlebars.js --templateDir Receipt_KO --data ko.json"
+    "generateFailedState-txt": "node compileHandlebars.js --templateDir FailedState --data failed.json --txtVersion",
+    "generateFailedState": "node compileMjml.js --templateDir FailedState && node compileHandlebars.js --templateDir FailedState --data failed.json"
   },
   "devDependencies": {
     "handlebars": "^4.7.8",
