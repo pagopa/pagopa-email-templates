@@ -2,31 +2,35 @@
 
 This repo contains the mail templates used by pagoPA, created using [MJML](https://mjml.io/) markup language.
 
-## How to apply changes
+## Prerequisites
 
-To edit them, you can choose among these following options:
-
-- [Online editor](https://mjml.io/try-it-live)
-- [Local installation](https://mjml.io/download)
-- [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=mjmlio.vscode-mjml)
-
-To generate the HTML output you need to install these CLI tools:
-
-1. [MJML](https://github.com/keithamus/hbs-cli) package:
+To generate the HTML (or `.txt`) output you will need to install two packages locally, `mjml` and `handlebars`. You can install them with the following command:
 
 ```shell
-$ npm install --g mjml
+$ npm install
+# or
+$ yarn
 ```
 
-2. [Handlebars CLI](https://github.com/keithamus/hbs-cli) to render handlebars templates:
+To preview the MJML files in your IDE, please install the [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=mjmlio.vscode-mjml)
+
+## Generate the receipts
+
+>[!note]
+> To apply changes, please note that the appropriate source file is:
+> - `index.mjml` for the HTML version
+> - `plain.text.hbs` for the `.txt` version
+
+### Failed state
 
 ```shell
-$ npm install --g hbs-cli
+## HTML version
+$ yarn generateReceiptKO
+## .txt version
+$ yarn generateReceiptKO-txt
 ```
 
 For the specific commands, take in consideration the local README files:
-
-1. [Receipt · Success](/Receipt_Success/)
 1. [Receipt · KO](/Receipt_KO/)
 
 ## How to deploy changes
