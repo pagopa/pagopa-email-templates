@@ -1,0 +1,17 @@
+{
+  "name": "pagopa-email-templates",
+  "version": "1.0.0",
+  "description": "All the mail templates used by pagoPA",
+  "repository": "git@github.com:pagopa/pagopa-email-templates.git",
+  "author": "Damiano Plebani <damiano.plebani@pagopa.it>",
+  "license": "EUPL-1.2",
+  "type": "module",
+  "scripts": {
+    "generateReceiptKO-txt": "node compileHandlebars.js --templateDir Receipt_KO --data ko.json --txtVersion",
+    "generateReceiptKO": "node compileMjml.js --templateDir Receipt_KO && node compileHandlebars.js --templateDir Receipt_KO --data ko.json"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.8",
+    "mjml": "^4.15.3"
+  }
+}
