@@ -15,7 +15,7 @@ const outputFilePath = templateDir ? path.join(templateDir, 'index.hbs') : null;
 const mjmlContent = fs.readFileSync(inputFilePath, 'utf8')
 
 // Compile the MJML content to HBS
-const hbsOutput = mjml2html(mjmlContent, { keepComments: false })
+const hbsOutput = mjml2html(mjmlContent, { keepComments: false, filePath: inputFilePath })
 
 // Check if outputFilePath is valid before writing
 if (outputFilePath) {

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "All the mail templates used by pagoPA",
   "repository": "git@github.com:pagopa/pagopa-email-templates.git",
-  "author": "Damiano Plebani <damiano.plebani@pagopa.it>",
+  "author": "Damiano Plebani",
   "license": "EUPL-1.2",
   "type": "module",
   "scripts": {

@@ -1,15 +1,14 @@
-** Ops! Il pagamento di 350,00 € tramite pagoPA non è riuscito **
+** Il pagamento non è riuscito **
 
-Il tuo pagamento non è andato a buon fine.
-Non è stato addebitato nessun importo sul metodo di pagamento utilizzato.
+Il tuo pagamento di 350,00 € non è andato a buon fine.
+Non è stato addebitato alcun importo.
 
 - - - - - - - - - - -
 
-Serve aiuto?
+Serve aiuto? Visita https://pagopa.gov.it/assistenza
 
-Contatta il servizio di assistenza all'indirizzo https://pagopa.gov.it/assistenza e comunica il codice transazione: F57E2F8E-25FF-4183-AB7B-4A5EC1A96644.
-
-Non rispondere a questa email. Questa casella di posta è utilizzata solo per l’invio della presente mail e, non essendo monitorata, non riceveresti risposta.
+Non rispondere a questo indirizzo email: è utilizzato solo per l’invio di questa comunicazione e, non essendo
+monitorato, non riceveresti risposta.
 
 - - - - - - - - - - -
 

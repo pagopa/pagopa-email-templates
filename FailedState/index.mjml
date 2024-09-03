@@ -18,16 +18,16 @@
         <mj-column>
           <mj-include path="../partials/main-logo.mjml" />
           <!-- Title & Main Message -->
-          <mj-text css-class="title" font-weight="bold" align="left">
+          <mj-text css-class="title" font-weight="bold" align="left" padding-top="16px" padding-bottom="16px">
             <h1 style="font-size: 32px; line-height: 40px; margin: 0;">
-              Ops! Il pagamento di {{transaction.amount}}&nbsp;&euro; tramite pagoPA non &egrave; riuscito
+              Il pagamento non &egrave; riuscito
             </h1>
           </mj-text>
           <mj-spacer height="8px" css-class="spacer" />
-          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left">
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left" padding-top="8px" padding-bottom="16px">
             <p>
-              Il tuo pagamento non &egrave; andato a buon fine. <br aria-hidden="true">
-              Non &egrave; stato addebitato nessun importo sul metodo di pagamento utilizzato.
+              Il tuo pagamento di {{transaction.amount}}&nbsp;&euro; non &egrave; andato a buon fine.<br aria-hidden="true">
+              Non &egrave; stato addebitato alcun importo.
             </p>
           </mj-text>
         </mj-column>

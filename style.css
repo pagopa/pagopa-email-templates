@@ -71,6 +71,7 @@ p {
 
 .link {
   color: #0066cc !important;
+  text-decoration: none;
 }
 
 @media (prefers-color-scheme: light) {

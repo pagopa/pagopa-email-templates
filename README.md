@@ -25,9 +25,9 @@ To preview the MJML files in your IDE, please install the [Visual Studio Code pl
 
 ```shell
 ## HTML version
-$ yarn generateReceiptKO
+$ yarn generateFailedState
 ## .txt version
-$ yarn generateReceiptKO-txt
+$ yarn generateFailedState-txt
 ```
 
 For the specific commands, take in consideration the local README files:
