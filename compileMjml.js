@@ -2,14 +2,15 @@ import mjml2html from 'mjml'
 import fs from 'fs'
 import path from 'path'
 
+const templateFolderName = "templates";
 // Parsing command-line arguments for template file path
 const args = process.argv.slice(2); // Remove the first two elements
 
 const templateDirArgIndex = args.indexOf('--templateDir') + 1;
 const templateDir = templateDirArgIndex > 0 ? args[templateDirArgIndex] : null;
 
-const inputFilePath = templateDir ? path.join(templateDir, 'index.mjml') : null;
-const outputFilePath = templateDir ? path.join(templateDir, 'index.hbs') : null;
+const inputFilePath = templateDir ? path.join(templateFolderName, templateDir, 'index.mjml') : null;
+const outputFilePath = templateDir ? path.join(templateFolderName, templateDir, 'index.hbs') : null;
 
 // Read the MJML file
 const mjmlContent = fs.readFileSync(inputFilePath, 'utf8')

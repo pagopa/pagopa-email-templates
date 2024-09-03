@@ -2,6 +2,7 @@ import Handlebars from 'handlebars';
 import fs from 'fs';
 import path from 'path';
 
+const templateFolderName = "templates";
 // Parsing command-line arguments for template file path and data
 const args = process.argv.slice(2); // Remove the first two elements
 
@@ -20,11 +21,11 @@ if (!templateDir) {
 }
 
 // Read the Handlebars template file
-const templateFilePath = path.join(templateDir, txtVersion ? "plain-text.hbs" : "index.hbs");
+const templateFilePath = path.join(templateFolderName, templateDir, txtVersion ? "plain-text.hbs" : "index.hbs");
 const templateContent = fs.readFileSync(templateFilePath, 'utf8');
 
 // Import and register helpers from the helpers directory
-const helpersDir = path.join(templateDir, 'helpers');
+const helpersDir = path.join(templateFolderName, templateDir, 'helpers');
 if (fs.existsSync(helpersDir)) {
   fs.readdirSync(helpersDir).forEach(file => {
     if (file.endsWith('.js')) {
@@ -37,7 +38,7 @@ if (fs.existsSync(helpersDir)) {
 // Read the data file if provided
 let data = {};
 if (dataFilePath) {
-  const dataFileRootPath = path.join(templateDir, dataFilePath);
+  const dataFileRootPath = path.join("json", dataFilePath);
   const dataContent = fs.readFileSync(dataFileRootPath, 'utf8');
   data = JSON.parse(dataContent);
 }
@@ -48,7 +49,7 @@ const htmlOutput = template(data); // Pass the context data here
 
 // Generate the output file path
 const outputFilename = txtVersion ? "plain-text.txt" : "index.html";
-const outputFilePath = path.join(templateDir, outputFilename);
+const outputFilePath = path.join(templateFolderName, templateDir, outputFilename);
 
 // Write the compiled HTML to the output file
 fs.writeFileSync(outputFilePath, htmlOutput, 'utf8');
