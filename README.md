@@ -18,7 +18,7 @@ To preview the MJML files in your IDE, please install the [Visual Studio Code pl
 
 >[!note]
 > To apply changes, please note that the appropriate source file is:
-> - `index.mjml` for the HTML version
+> - `index.hbs` for the HTML version
 > - `plain.text.hbs` for the `.txt` version
 
 ### Failed state
