@@ -25,15 +25,12 @@ const templateFilePath = path.join(templateFolderName, templateDir, txtVersion ?
 const templateContent = fs.readFileSync(templateFilePath, 'utf8');
 
 // Import and register helpers from the helpers directory
-const helpersDir = path.join(templateFolderName, templateDir, 'helpers');
-if (fs.existsSync(helpersDir)) {
-  fs.readdirSync(helpersDir).forEach(file => {
-    if (file.endsWith('.js')) {
-      const helper = require(path.join(helpersDir, file));
-      Handlebars.registerHelper(helper.name, helper.func);
-    }
-  });
-};
+import { eq } from './helpers/eq.js';
+import { not } from './helpers/not.js';
+
+// Register the helpers with Handlebars
+Handlebars.registerHelper('eq', eq);
+Handlebars.registerHelper('not', not);
 
 // Read the data file if provided
 let data = {};

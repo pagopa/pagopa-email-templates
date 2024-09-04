@@ -1,0 +1,60 @@
+<mjml lang="it">
+  <mj-head>
+    <mj-title>Ricevuta del pagamento a {placeholder}</mj-title>
+    <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
+    <mj-attributes>
+      <mj-all font-family="Titillium Web, system-ui, sans-serif" />
+    </mj-attributes>
+    <mj-raw>
+      <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+      <meta name="color-scheme" content="light dark">
+      <meta name="supported-color-schemes" content="light dark">
+    </mj-raw>
+  </mj-head>
+  <mj-body css-class="mail-body">
+    <mj-include path="../../styles/style.css" type="css" />
+    <mj-wrapper>
+      <mj-section css-class="header">
+        <mj-column>
+          <!-- pagoPA Logo -->
+          <mj-include path="../../partials/main-logo.mjml" />
+          <!-- Title & Main Message -->
+          <mj-text css-class="title" font-weight="bold" align="left">
+            <h1 style="font-size: 32px; line-height: 40px; margin: 0;">
+              Ricevuta del pagamento a {{cart.items.[0].payee.name}}
+            </h1>
+          </mj-text>
+          <mj-spacer height="8px" css-class="spacer" />
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left">
+            <p>
+              Il tuo pagamento &egrave; andato a buon fine. La ricevuta &egrave; in allegato a questa e-mail.
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-raw>
+        {{#eq cart.items.length 1}}
+          {{#if cart.items.[0].subject}}
+      </mj-raw>
+      <!-- Transaction Subject -->
+      <mj-include path="../../partials/transaction_subject.mjml" />
+      <mj-raw>
+        {{/if}}
+        {{/eq}}
+      </mj-raw>
+      <!-- Divider -->
+      <mj-include path="../../partials/divider.mjml" />
+      <!-- Transaction Detail -->
+      <mj-include path="../../partials/transaction_detail.mjml" />
+      <!-- Divider -->
+      <mj-include path="../../partials/divider.mjml" />
+      <!-- Bank Charges -->
+      <mj-raw>{{#if transaction.paymentMethod.extraFee}}</mj-raw>
+      <mj-include path="../../partials/bank-charges-disclaimer.mjml" />
+      <mj-raw>{{/if}}</mj-raw>
+      <!-- Footer -->
+      <mj-include path="../../partials/footer.mjml" />
+    </mj-wrapper>
+  </mj-body>
+</mjml>
