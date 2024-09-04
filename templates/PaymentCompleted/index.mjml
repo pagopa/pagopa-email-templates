@@ -1,6 +1,6 @@
 <<mjml lang="it">
   <mj-head>
-    <mj-title>Ricevuta del pagamento a Comune di Controguerra
+    <mj-title>Ricevuta del pagamento a Comune di Castrocaro Terme e Terra del Sole
 </mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
@@ -22,7 +22,7 @@
           <!-- Title & Main Message -->
           <mj-text css-class="title" font-weight="bold" align="left">
             <h1 style="font-size: 32px; line-height: 40px; margin: 0;">
-              Ricevuta del pagamento a Comune di Controguerra
+              Ricevuta del pagamento a Comune di Castrocaro Terme e Terra del Sole
             </h1>
           </mj-text>
           <mj-spacer height="8px" css-class="spacer" />
@@ -40,7 +40,7 @@
         <mj-column>
           <mj-text css-class="value" color="#17324D" font-size="22px" line-height="27px" font-weight="bold" padding-top="32px"
             padding-bottom="0px">
-            TARI 2024
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus sapien, euismod eget commodo blandit, iaculis non elit. Integer velit ligula
           </mj-text>
         </mj-column>
       </mj-section>
@@ -58,7 +58,7 @@
               <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71; white-space: nowrap;">Debitore
               </td>
               <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">
-                Giuseppe Bianchi (BNCGSP70A12F205X)
+                Antonio Griffo Focas Flavio Angelo Antonio Griffo Angelo Antonio (DCSNNG98B15F839V)
               </td>
             </tr>
           </mj-table>
@@ -67,7 +67,7 @@
           <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
             <tr style="text-align:left; vertical-align: top;">
               <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Ente creditore</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">Comune di Controguerra</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">Comune di Castrocaro Terme e Terra del Sole</td>
             </tr>
           </mj-table>
       
@@ -80,15 +80,14 @@
           </mj-table>
       
       
-      
-          <!-- Codice Avviso -->
+          <!-- IUV -->
           <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
             <tr style="text-align:left; vertical-align: top;">
-              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Codice avviso</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">
-                1234 5678 9012 3456 78</td>
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">IUV</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">1234567890123456</td>
             </tr>
           </mj-table>
+      
       
       
           <!-- Importo -->
@@ -110,7 +109,7 @@
           <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
             <tr style="text-align:left; vertical-align: top;">
               <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Commissione (applicata da
-                Nexi)</td>
+                American Express Payment Services)</td>
               <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">
                 2,00&nbsp;&euro;</td>
             </tr>

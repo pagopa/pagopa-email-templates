@@ -4,26 +4,11 @@
     "timestamp": "24 ottobre 2022, 18:45:56",
     "amount": "152,00",
     "psp": {
-      "name": "American Express Payment Services",
+      "name": "Nexi",
       "fee": {
         "amount": "2,00"
       }
-    },
-    "rrn": "1234567890",
-    "authCode": "9999999999",
-    "paymentMethod": {
-      "name": "Apple Pay",
-      "logo": "../assets/methods/apple-pay.png",
-      "extraFee": false
     }
-  },
-  "user": {
-    "data": {
-      "firstName": "Marzia",
-      "lastName": "Roccaraso",
-      "taxCode": "RCCMRZ88A52C409A"
-    },
-    "email": "nome.cognome@pagopa.it"
   },
   "cart": {
     "items": [
@@ -40,7 +25,7 @@
           "name": "Comune di Controguerra",
           "taxCode": 82001760675
         },
-        "subject": "TARI 2022",
+        "subject": "TARI 2024",
         "amount": "150,00"
       }
     ]

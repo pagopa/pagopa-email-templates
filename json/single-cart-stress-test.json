@@ -4,22 +4,11 @@
     "timestamp": "24 ottobre 2022, 18:45:56",
     "amount": "152,00",
     "psp": {
-      "name": "Nexi",
+      "name": "American Express Payment Services",
       "fee": {
         "amount": "2,00"
       }
-    },
-    "rrn": "1234567890",
-    "authCode": "9999999999",
-    "paymentMethod": {
-      "name": "Visa *1234",
-      "logo": "../assets/methods/visa.png",
-      "accountHolder": "Marzia Roccaraso",
-      "extraFee": false
     }
-  },
-  "user": {
-    "email": "nome.cognome@pagopa.it"
   },
   "cart": {
     "items": [
@@ -29,14 +18,14 @@
           "value": "1234567890123456"
         },
         "debtor": {
-          "fullName": "Giuseppe Bianchi",
-          "taxCode": "BNCGSP70A12F205X"
+          "fullName": "Antonio Griffo Focas Flavio Angelo Antonio Griffo Angelo Antonio",
+          "taxCode": "DCSNNG98B15F839V"
         },
         "payee": {
-          "name": "Comune di Controguerra",
+          "name": "Comune di Castrocaro Terme e Terra del Sole",
           "taxCode": 82001760675
         },
-        "subject": "TARI 2024",
+        "subject": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lacus sapien, euismod eget commodo blandit, iaculis non elit. Integer velit ligula",
         "amount": "150,00"
       }
     ]
