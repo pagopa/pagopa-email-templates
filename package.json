@@ -9,7 +9,7 @@
   "scripts": {
     "generateFailedState-txt": "node compileHandlebars.js --templateDir FailedState --data failed.json --txtVersion",
     "generateFailedState": "node compileMjml.js --templateDir FailedState && node compileHandlebars.js --templateDir FailedState --data failed.json",
-    "generatePaymentCompleted": "node compileMjml.js --templateDir PaymentCompleted && node compileHandlebars.js --templateDir PaymentCompleted --data authenticated.json"
+    "generatePaymentCompleted": "node compileHandlebars.js --templateDir PaymentCompleted --data authenticated-multiple-cart-items.json && node compileMjml.js --templateDir PaymentCompleted"
   },
   "devDependencies": {
     "handlebars": "^4.7.8",

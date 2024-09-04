@@ -1,0 +1,13 @@
+{{#eq @root.cart.items.length 1}}
+{{#if @root.cart.items.[0].subject}}
+<!-- Transaction Subject -->
+<mj-section css-class="section" padding-bottom="0px" padding-top="0px">
+  <mj-column>
+    <mj-text css-class="value" color="#17324D" font-size="22px" line-height="27px" font-weight="bold" padding-top="32px"
+      padding-bottom="0px">
+      {{@root.cart.items.[0].subject}}
+    </mj-text>
+  </mj-column>
+</mj-section>
+{{/if}}
+{{/eq}}

@@ -24,13 +24,24 @@ if (!templateDir) {
 const templateFilePath = path.join(templateFolderName, templateDir, txtVersion ? "plain-text.hbs" : "index.hbs");
 const templateContent = fs.readFileSync(templateFilePath, 'utf8');
 
-// Import and register helpers from the helpers directory
+// Import and register the helpers
 import { eq } from './helpers/eq.js';
 import { not } from './helpers/not.js';
+import { splitAndSpace } from './helpers/splitAndSpace.js';
 
-// Register the helpers with Handlebars
 Handlebars.registerHelper('eq', eq);
 Handlebars.registerHelper('not', not);
+Handlebars.registerHelper('splitAndSpace', splitAndSpace);
+
+// Import and register the partials
+const importPartial = (partialName, partialPath) => {
+  const partialContent = fs.readFileSync(path.join('partials', partialPath), 'utf8');
+  Handlebars.registerPartial(partialName, partialContent);
+}
+
+importPartial('headerTitle', 'header-title.hbs');
+importPartial('transactionDetail', 'transaction-detail.hbs');
+importPartial('transactionSubject', 'transaction-subject.hbs');
 
 // Read the data file if provided
 let data = {};
@@ -45,7 +56,7 @@ const template = Handlebars.compile(templateContent);
 const htmlOutput = template(data); // Pass the context data here
 
 // Generate the output file path
-const outputFilename = txtVersion ? "plain-text.txt" : "index.html";
+const outputFilename = txtVersion ? "plain-text.txt" : "index.mjml";
 const outputFilePath = path.join(templateFolderName, templateDir, outputFilename);
 
 // Write the compiled HTML to the output file

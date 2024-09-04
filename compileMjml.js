@@ -10,7 +10,7 @@ const templateDirArgIndex = args.indexOf('--templateDir') + 1;
 const templateDir = templateDirArgIndex > 0 ? args[templateDirArgIndex] : null;
 
 const inputFilePath = templateDir ? path.join(templateFolderName, templateDir, 'index.mjml') : null;
-const outputFilePath = templateDir ? path.join(templateFolderName, templateDir, 'index.hbs') : null;
+const outputFilePath = templateDir ? path.join(templateFolderName, templateDir, 'index.html') : null;
 
 // Read the MJML file
 const mjmlContent = fs.readFileSync(inputFilePath, 'utf8')

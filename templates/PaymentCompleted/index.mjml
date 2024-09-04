@@ -1,6 +1,7 @@
-<mjml lang="it">
+<<mjml lang="it">
   <mj-head>
-    <mj-title>Ricevuta del pagamento a {placeholder}</mj-title>
+    <mj-title>Ricevuta di pagamento
+</mj-title>
     <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
       <mj-all font-family="Titillium Web, system-ui, sans-serif" />
@@ -14,18 +15,19 @@
   <mj-body css-class="mail-body">
     <mj-include path="../../styles/style.css" type="css" />
     <mj-wrapper>
-      <mj-section css-class="header">
+      <mj-section css-class="header" padding-bottom="0px">
         <mj-column>
           <!-- pagoPA Logo -->
-          <mj-include path="../../partials/main-logo.mjml" />
+          <mj-include path="../../partials/header-logo.mjml" />
           <!-- Title & Main Message -->
           <mj-text css-class="title" font-weight="bold" align="left">
             <h1 style="font-size: 32px; line-height: 40px; margin: 0;">
-              Ricevuta del pagamento a {{cart.items.[0].payee.name}}
+              Ricevuta di pagamento
             </h1>
           </mj-text>
           <mj-spacer height="8px" css-class="spacer" />
-          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left">
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left"
+            padding-bottom="8px">
             <p>
               Il tuo pagamento &egrave; andato a buon fine. La ricevuta &egrave; in allegato a questa e-mail.
             </p>
@@ -33,28 +35,161 @@
         </mj-column>
       </mj-section>
 
-      <mj-raw>
-        {{#eq cart.items.length 1}}
-          {{#if cart.items.[0].subject}}
-      </mj-raw>
-      <!-- Transaction Subject -->
-      <mj-include path="../../partials/transaction_subject.mjml" />
-      <mj-raw>
-        {{/if}}
-        {{/eq}}
-      </mj-raw>
+
       <!-- Divider -->
       <mj-include path="../../partials/divider.mjml" />
+
       <!-- Transaction Detail -->
-      <mj-include path="../../partials/transaction_detail.mjml" />
+      <mj-section css-class="section" padding-bottom="0px" padding-top="0px">
+        <mj-column>
+      
+          <!-- Debitore -->
+      
+          <!-- Ente creditore -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Ente creditore</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">Comune di Controguerra</td>
+            </tr>
+          </mj-table>
+      
+          <!-- Codice Fiscale ente -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Codice Fiscale ente</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">82001760675</td>
+            </tr>
+          </mj-table>
+      
+      
+      
+          <!-- Codice Avviso -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Codice avviso</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">
+                1234 5678 9012 3456 78</td>
+            </tr>
+          </mj-table>
+      
+          <!-- Oggetto del pagamento -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Oggetto</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">TARI 2022</td>
+            </tr>
+          </mj-table>
+      
+          <!-- Importo -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Importo</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">
+                150,00&nbsp;&euro;</td>
+            </tr>
+          </mj-table>
+      
+          <!-- Divider -->
+          <mj-divider padding-top="24px" padding-bottom="24px" border-width="1px" border-style="solid"
+            border-color="lightgrey" />
+      
+      
+          <!-- Debitore -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71; white-space: nowrap;">Debitore
+              </td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">
+                Giuseppe Bianchi (BNCGSP70A12F205X)
+              </td>
+            </tr>
+          </mj-table>
+      
+          <!-- Ente creditore -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Ente creditore</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">Comune di Controguerra</td>
+            </tr>
+          </mj-table>
+      
+          <!-- Codice Fiscale ente -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Codice Fiscale ente</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">82001760675</td>
+            </tr>
+          </mj-table>
+      
+      
+          <!-- IUV -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">IUV</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">123456789012345679</td>
+            </tr>
+          </mj-table>
+      
+      
+          <!-- Oggetto del pagamento -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Oggetto</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">Multa per eccesso di velocità</td>
+            </tr>
+          </mj-table>
+      
+          <!-- Importo -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Importo</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">
+                72,00&nbsp;&euro;</td>
+            </tr>
+          </mj-table>
+      
+          <!-- Divider -->
+          <mj-divider padding-top="24px" padding-bottom="24px" border-width="1px" border-style="solid"
+            border-color="lightgrey" />
+      
+      
+          <!-- Partial Amount -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Importo parziale</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">
+                222,00&nbsp;&euro;</td>
+            </tr>
+          </mj-table>
+      
+          <!-- Commissione -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; vertical-align: top;">
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Commissione (applicata da
+                Nexi)</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">
+                2,00&nbsp;&euro;</td>
+            </tr>
+          </mj-table>
+      
+          <!-- Totale -->
+          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
+            <tr style="text-align:left; font-weight: bold; vertical-align: top;">
+              <td class="value" style="padding: 8px 0px; padding-right: 16px;">Totale</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; white-space: nowrap;">
+                224,00&nbsp;&euro;</td>
+            </tr>
+          </mj-table>
+      
+        </mj-column>
+      </mj-section>
       <!-- Divider -->
       <mj-include path="../../partials/divider.mjml" />
+
       <!-- Bank Charges -->
-      <mj-raw>{{#if transaction.paymentMethod.extraFee}}</mj-raw>
-      <mj-include path="../../partials/bank-charges-disclaimer.mjml" />
-      <mj-raw>{{/if}}</mj-raw>
+
       <!-- Footer -->
       <mj-include path="../../partials/footer.mjml" />
     </mj-wrapper>
   </mj-body>
-</mjml>
+  </mjml>
