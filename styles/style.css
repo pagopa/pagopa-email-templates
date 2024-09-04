@@ -46,6 +46,10 @@ body,
   display: inline-block;
 }
 
+.alert-block {
+  background-color: #FFF5DA;
+}
+
 .mail-address,
 .mail-address div {
   word-break: break-all;
