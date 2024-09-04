@@ -8,7 +8,7 @@
   "type": "module",
   "scripts": {
     "generateFailedState-txt": "node compileHandlebars.js --templateDir FailedState --data failed.json --txtVersion",
-    "generateFailedState": "node compileMjml.js --templateDir FailedState && node compileHandlebars.js --templateDir FailedState --data failed.json",
+    "generateFailedState": "node compileHandlebars.js --templateDir FailedState --data failed.json && node compileMjml.js --templateDir FailedState",
     "generatePaymentCompleted": "node compileHandlebars.js --templateDir PaymentCompleted --data single-cart.json && node compileMjml.js --templateDir PaymentCompleted",
     "generatePaymentCompleted-stressTest": "node compileHandlebars.js --templateDir PaymentCompleted --data single-cart-stress-test.json && node compileMjml.js --templateDir PaymentCompleted",
     "generatePaymentCompleted-multipleItems": "node compileHandlebars.js --templateDir PaymentCompleted --data multiple-cart-items.json && node compileMjml.js --templateDir PaymentCompleted"
