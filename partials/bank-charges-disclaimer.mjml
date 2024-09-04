@@ -1,9 +1,0 @@
-<mj-section css-class="section" padding-bottom="8px" padding-top="8px">
-  <mj-column>
-    <mj-text css-class="caption" font-size="14px" line-height="20px" font-weight="regular" padding-top="0px" padding-bottom="0px">
-      <p>
-        Il totale non include eventuali costi di invio bonifico, se applicati dal gestore della transazione (PSP). Per maggiori informazioni, rivolgiti alla tua banca.
-      </p>
-    </mj-text>
-  </mj-column>
-</mj-section>

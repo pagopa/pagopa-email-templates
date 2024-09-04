@@ -1,9 +1,9 @@
 import mjml2html from 'mjml'
 import fs from 'fs'
 import path from 'path'
+import beautify from 'js-beautify';
 
 const templateFolderName = "templates";
-// Parsing command-line arguments for template file path
 const args = process.argv.slice(2); // Remove the first two elements
 
 const templateDirArgIndex = args.indexOf('--templateDir') + 1;
@@ -15,8 +15,17 @@ const outputFilePath = templateDir ? path.join(templateFolderName, templateDir, 
 // Read the MJML file
 const mjmlContent = fs.readFileSync(inputFilePath, 'utf8')
 
-// Compile the MJML content to HBS
+// Compile the MJML content to HTML
 const hbsOutput = mjml2html(mjmlContent, { keepComments: false, filePath: inputFilePath })
+
+// Beautify the HTML output
+const beautifiedHtml = beautify.html(hbsOutput.html, {
+  indent_size: 2,
+  end_with_newline: true,
+  wrap_line_length: 80,
+});
+
+hbsOutput.html = beautifiedHtml;
 
 // Check if outputFilePath is valid before writing
 if (outputFilePath) {
