@@ -14,14 +14,53 @@ $ yarn
 
 To preview the MJML files in your IDE, please install the [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=mjmlio.vscode-mjml)
 
+>[!note]
+> 🖼️ You can preview each single template by opening the relative image in the `previews` folder OR by opening the `index.html` file contained in each template subfolder (after generating the HTML version).
+
 ## Generate the receipts
 
->[!note]
+>[!important]
 > To apply changes, please note that the appropriate source file is:
 > - `index.hbs` for the HTML version
 > - `plain.text.hbs` for the `.txt` version
 
-### Failed state
+Every template is generated following the same pattern:
+
+* **HTML version**: 
+Source file (`.hbs`) → Handlebars compilation using the relative `*.json` data file (if present) → Intermediate file (`*.mjml`) -> Mjml compilation → Final output (`*.html`)
+* **Txt version**: 
+Source file (`.hbs`) → Handlebars compilation using the relative `*.json` data file (if present) → Final output (`*.txt`)
+
+### Completed payment
+
+```shell
+## HTML version (Single cart)
+$ yarn generatePaymentCompleted
+## HTML version (Multiple cart items)
+$ yarn generatePaymentCompleted-multipleItems
+### HTML version (Stress test, longer strings)
+$ yarn generatePaymentCompleted-stressTest
+## .txt version
+$ yarn generatePaymentCompleted-txt
+```
+
+### Pending payment
+
+```shell
+## HTML version
+$ yarn generatePaymentPending
+## HTML version (Multiple cart items)
+$ yarn generatePaymentPending-multipleItems
+```
+
+### Refund
+
+```shell
+## HTML version
+$ yarn generatePaymentRefund
+```
+
+### Fail
 
 ```shell
 ## HTML version
@@ -29,9 +68,6 @@ $ yarn generateFailedState
 ## .txt version
 $ yarn generateFailedState-txt
 ```
-
-For the specific commands, take in consideration the local README files:
-1. [Receipt · KO](/Receipt_KO/)
 
 ## How to deploy changes
 
