@@ -1,4 +1,10 @@
-** Hai inviato un pagamento di {{transaction.amount}} € tramite pagoPA **
+{{#eq @root.cart.items.length 1}}
+** Ricevuta del pagamento a {{@root.cart.items.[0].payee.name}} **
+{{/eq}}
+{{#not @root.cart.items.length 1}}
+** Ricevuta di pagamento **
+{{/not}}
+
 Il tuo pagamento è andato a buon fine. Ecco i dettagli dell'operazione.
 
 {{!-- Don't remove extra lines between built-in helpers (if/with/each/etc…).
@@ -16,22 +22,6 @@ Oggetto del pagamento:
 {{/if}}
 {{/eq}}
 {{!-- End condition --}}
-
-- - - - - - - - - - -
-
-{{!-- Show the following key value pair if user is authenticated --}}
-{{#with user.data}}
-Pagato da: {{firstName}} {{lastName}} ({{taxCode}})
-{{/with}}
-Indirizzo email: {{user.email}}
-ID transazione (RRN): {{transaction.rrn}}
-Codice autorizzativo: {{transaction.authCode}}
-Metodo di pagamento: {{transaction.paymentMethod.name}}
-{{#if transaction.paymentMethod.accountHolder}}
-Intestato a: {{transaction.paymentMethod.accountHolder}}
-{{/if}}
-Gestore della transazione (PSP): {{transaction.psp.name}}
-Data e ora: {{transaction.timestamp}}
 
 - - - - - - - - - - -
 
@@ -60,21 +50,13 @@ Importo parziale: {{cart.amountPartial}} €
 Commissione (applicata da {{transaction.psp.name}}): {{transaction.psp.fee.amount}} €
 
 Totale: {{transaction.amount}} €
-{{#if transaction.paymentMethod.extraFee}}
-
-Il totale non include eventuali costi di invio bonifico, se applicati dal gestore della transazione (PSP). Per maggiori
-informazioni, rivolgiti alla tua banca.
-{{/if}}
 
 - - - - - - - - - - -
 
-Serve aiuto?
+Serve aiuto? Visita https://pagopa.gov.it/assistenza
 
-Contatta il servizio di assistenza all'indirizzo https://pagopa.gov.it/assistenza e comunica il codice transazione:
-{{transaction.id}}.
-
-Non rispondere a questa email. Questa casella di posta è utilizzata solo per l’invio della presente mail e, non essendo
-monitorata, non riceveresti risposta.
+Non rispondere a questo indirizzo email: è utilizzato solo per l’invio di questa comunicazione e, non essendo
+monitorato, non riceveresti risposta.
 
 - - - - - - - - - - -
 

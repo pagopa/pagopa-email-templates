@@ -2,8 +2,8 @@ import Handlebars from 'handlebars';
 import fs from 'fs';
 import path from 'path';
 
-const templateFolderName = "templates";
 // Parsing command-line arguments for template file path and data
+const templateFolderName = "templates";
 const args = process.argv.slice(2); // Remove the first two elements
 
 const templateDirArgIndex = args.indexOf('--templateDir') + 1;
