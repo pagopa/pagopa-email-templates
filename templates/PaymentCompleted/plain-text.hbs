@@ -4,7 +4,6 @@
 {{#not @root.cart.items.length 1}}
 ** Ricevuta di pagamento **
 {{/not}}
-
 Il tuo pagamento è andato a buon fine. Ecco i dettagli dell'operazione.
 
 {{!-- Don't remove extra lines between built-in helpers (if/with/each/etc…).
@@ -13,12 +12,12 @@ in all the possible combinations --}}
 
 {{!-- Show transaction subject if there aren't multiple cart items
 AND transaction subject is set --}}
-{{#eq cart.items.length 1}}
-{{#if cart.items.[0].subject}}
+{{#eq @root.cart.items.length 1}}
+{{#if @root.cart.items.[0].subject}}
 - - - - - - - - - - -
 
 Oggetto del pagamento:
-{{cart.items.[0].subject}}
+{{@root.cart.items.[0].subject}}
 {{/if}}
 {{/eq}}
 {{!-- End condition --}}
@@ -32,10 +31,10 @@ Debitore: {{fullName}} {{#if taxCode}}({{taxCode}}){{/if}}
 Ente creditore: {{this.payee.name}}
 Codice Fiscale ente: {{this.payee.taxCode}}
 {{#eq this.refNumber.type "codiceAvviso"}}
-Codice Avviso: {{this.refNumber.value}}
+Codice Avviso: {{../this.refNumber.value}}
 {{/eq}}
 {{#eq this.refNumber.type "IUV"}}
-IUV: {{this.refNumber.value}}
+IUV: {{../this.refNumber.value}}
 {{/eq}}
 {{#not @root.cart.items.length 1}}
 Oggetto del pagamento: {{this.subject}}

@@ -10,6 +10,7 @@
     "generateFailedState-txt": "node compileHandlebars.js --templateDir FailedState --data failed.json --txtVersion",
     "generateFailedState": "node compileHandlebars.js --templateDir FailedState --data failed.json && node compileMjml.js --templateDir FailedState",
     "generatePaymentRefund": "node compileHandlebars.js --templateDir PaymentRefund && node compileMjml.js --templateDir PaymentRefund",
+    "generatePaymentCompleted-txt": "node compileHandlebars.js --templateDir PaymentCompleted --data single-cart.json --txtVersion",
     "generatePaymentCompleted": "node compileHandlebars.js --templateDir PaymentCompleted --data single-cart.json && node compileMjml.js --templateDir PaymentCompleted",
     "generatePaymentCompleted-stressTest": "node compileHandlebars.js --templateDir PaymentCompleted --data single-cart-stress-test.json && node compileMjml.js --templateDir PaymentCompleted",
     "generatePaymentCompleted-multipleItems": "node compileHandlebars.js --templateDir PaymentCompleted --data multiple-cart-items.json && node compileMjml.js --templateDir PaymentCompleted",
