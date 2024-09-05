@@ -12,10 +12,10 @@ $ npm install
 $ yarn
 ```
 
-To preview the MJML files in your IDE, please install the [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=mjmlio.vscode-mjml)
+To preview the MJML files in your IDE, please install the [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=mjmlio.vscode-mjml).
 
 >[!note]
-> 🖼️ You can preview each single template by opening the relative image in the `previews` folder OR by opening the `index.html` file contained in each template subfolder (after generating the HTML version).
+> 🖼️ You can preview each single template by opening the relative image in the `previews` folder **OR** by opening the `index.html` file contained in each template subfolder (after generating the HTML version).
 
 ## Generate the receipts
 
