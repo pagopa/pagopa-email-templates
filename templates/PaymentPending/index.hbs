@@ -13,7 +13,7 @@
   </mj-head>
   <mj-body css-class="mail-body">
     <mj-include path="../../styles/style.css" type="css" />
-    <mj-wrapper>
+    <mj-wrapper padding-bottom="0px">
       <mj-section css-class="header" padding-bottom="0px">
         <mj-column>
           <!-- pagoPA Logo -->
@@ -27,18 +27,20 @@
           <mj-spacer height="8px" css-class="spacer" />
         </mj-column>
       </mj-section>
+    </mj-wrapper>
 
-      <mj-section css-class="section" padding="0px 25px">
-        <mj-wrapper css-class="alert-block" border-left="4px solid #FFCB46" border-radius="8px" padding="16px">
-          <mj-column>
-            <mj-text font-size="16px" line-height="22px" align="left" color="#17324D" padding="0">
-              Il pagamento non si &egrave; ancora concluso: riceverai a breve l&rsquo;esito via e-mail.
-              L&rsquo;operazione pu&ograve; richiedere fino a 15 minuti.
-            </mj-text>
-          </mj-column>
-        </mj-wrapper>
+    <mj-wrapper css-class="section" padding="0px 25px">
+      <mj-section css-class="alert-block" border-left="4px solid #FFCB46" border-radius="8px" padding="16px">
+        <mj-column>
+          <mj-text font-size="16px" line-height="22px" align="left" color="#17324D" padding="0">
+            Il pagamento non si &egrave; ancora concluso: riceverai a breve l&rsquo;esito via e-mail.
+            L&rsquo;operazione pu&ograve; richiedere fino a 15 minuti.
+          </mj-text>
+        </mj-column>
       </mj-section>
+    </mj-wrapper>
 
+    <mj-wrapper padding-top="0px">
       {{> transactionSubject}}
 
       <!-- Divider -->

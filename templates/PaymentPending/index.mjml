@@ -13,7 +13,7 @@
   </mj-head>
   <mj-body css-class="mail-body">
     <mj-include path="../../styles/style.css" type="css" />
-    <mj-wrapper>
+    <mj-wrapper padding-bottom="0px">
       <mj-section css-class="header" padding-bottom="0px">
         <mj-column>
           <!-- pagoPA Logo -->
@@ -27,18 +27,29 @@
           <mj-spacer height="8px" css-class="spacer" />
         </mj-column>
       </mj-section>
+    </mj-wrapper>
 
-      <mj-section css-class="section" padding="0px 25px">
-        <mj-wrapper css-class="alert-block" border-left="4px solid #FFCB46" border-radius="8px" padding="16px">
-          <mj-column>
-            <mj-text font-size="16px" line-height="22px" align="left" color="#17324D" padding="0">
-              Il pagamento non si &egrave; ancora concluso: riceverai a breve l&rsquo;esito via e-mail.
-              L&rsquo;operazione pu&ograve; richiedere fino a 15 minuti.
-            </mj-text>
-          </mj-column>
-        </mj-wrapper>
+    <mj-wrapper css-class="section" padding="0px 25px">
+      <mj-section css-class="alert-block" border-left="4px solid #FFCB46" border-radius="8px" padding="16px">
+        <mj-column>
+          <mj-text font-size="16px" line-height="22px" align="left" color="#17324D" padding="0">
+            Il pagamento non si &egrave; ancora concluso: riceverai a breve l&rsquo;esito via e-mail.
+            L&rsquo;operazione pu&ograve; richiedere fino a 15 minuti.
+          </mj-text>
+        </mj-column>
       </mj-section>
+    </mj-wrapper>
 
+    <mj-wrapper padding-top="0px">
+      <!-- Transaction Subject -->
+      <mj-section css-class="section" padding-bottom="0px" padding-top="0px">
+        <mj-column>
+          <mj-text css-class="value" color="#17324D" font-size="22px" line-height="28px" font-weight="bold" padding-top="32px"
+            padding-bottom="0px">
+            TARI 2024
+          </mj-text>
+        </mj-column>
+      </mj-section>
 
       <!-- Divider -->
       <mj-include path="../../partials/divider.mjml" />
@@ -46,57 +57,6 @@
       <!-- Transaction Detail -->
       <mj-section css-class="section" padding-bottom="0px" padding-top="0px">
         <mj-column>
-      
-          <!-- Debitore -->
-      
-          <!-- Ente creditore -->
-          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
-            <tr style="text-align:left; vertical-align: top;">
-              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Ente creditore</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">Comune di Controguerra</td>
-            </tr>
-          </mj-table>
-      
-          <!-- Codice Fiscale ente -->
-          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
-            <tr style="text-align:left; vertical-align: top;">
-              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Codice Fiscale ente</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">82001760675</td>
-            </tr>
-          </mj-table>
-      
-      
-      
-          <!-- Codice Avviso -->
-          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
-            <tr style="text-align:left; vertical-align: top;">
-              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Codice avviso</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">
-                1234 5678 9012 3456 78</td>
-            </tr>
-          </mj-table>
-      
-          <!-- Oggetto del pagamento -->
-          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
-            <tr style="text-align:left; vertical-align: top;">
-              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Oggetto</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">TARI 2022</td>
-            </tr>
-          </mj-table>
-      
-          <!-- Importo -->
-          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
-            <tr style="text-align:left; vertical-align: top;">
-              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Importo</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">
-                150,00&nbsp;&euro;</td>
-            </tr>
-          </mj-table>
-      
-          <!-- Divider -->
-          <mj-divider padding-top="24px" padding-bottom="24px" border-width="1px" border-style="solid"
-            border-color="lightgrey" />
-      
       
           <!-- Debitore -->
           <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
@@ -126,29 +86,23 @@
           </mj-table>
       
       
-          <!-- IUV -->
+      
+          <!-- Codice Avviso -->
           <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
             <tr style="text-align:left; vertical-align: top;">
-              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">IUV</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">123456789012345679</td>
+              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Codice avviso</td>
+              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">
+                1234 5678 9012 3456 78</td>
             </tr>
           </mj-table>
       
-      
-          <!-- Oggetto del pagamento -->
-          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
-            <tr style="text-align:left; vertical-align: top;">
-              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Oggetto</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold;">Multa per eccesso di velocità</td>
-            </tr>
-          </mj-table>
       
           <!-- Importo -->
           <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
             <tr style="text-align:left; vertical-align: top;">
               <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Importo</td>
               <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">
-                72,00&nbsp;&euro;</td>
+                150,00&nbsp;&euro;</td>
             </tr>
           </mj-table>
       
@@ -157,14 +111,6 @@
             border-color="lightgrey" />
       
       
-          <!-- Partial Amount -->
-          <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
-            <tr style="text-align:left; vertical-align: top;">
-              <td class="key" style="padding: 8px 0px; padding-right: 16px; color: #455B71;">Importo parziale</td>
-              <td class="value" style="padding: 8px 0px; text-align: right; font-weight: bold; white-space: nowrap;">
-                222,00&nbsp;&euro;</td>
-            </tr>
-          </mj-table>
       
           <!-- Commissione -->
           <mj-table font-size="16px" line-height="20px" vertical-align="top" padding-top="0px" padding-bottom="0px">
@@ -181,7 +127,7 @@
             <tr style="text-align:left; font-weight: bold; vertical-align: top;">
               <td class="value" style="padding: 8px 0px; padding-right: 16px;">Totale</td>
               <td class="value" style="padding: 8px 0px; text-align: right; white-space: nowrap;">
-                224,00&nbsp;&euro;</td>
+                152,00&nbsp;&euro;</td>
             </tr>
           </mj-table>
       
