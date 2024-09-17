@@ -7,6 +7,7 @@
   "license": "EUPL-1.2",
   "type": "module",
   "scripts": {
+    "generate": "yarn generateFailedState && yarn generatePaymentPending && yarn generatePaymentCompleted && yarn generatePaymentRefund",
     "generateFailedState-txt": "node compileHandlebars.js --templateDir FailedState --data failed.json --txtVersion",
     "generateFailedState": "node compileHandlebars.js --templateDir FailedState --data failed.json && node compileMjml.js --templateDir FailedState",
     "generatePaymentRefund": "node compileHandlebars.js --templateDir PaymentRefund && node compileMjml.js --templateDir PaymentRefund",

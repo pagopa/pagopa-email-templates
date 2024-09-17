@@ -2,9 +2,9 @@
   <mj-head>
     <mj-title>Ricevuta del pagamento a Comune di Controguerra
 </mj-title>
-    <mj-font name="Titillium Web" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
+    <mj-font name="Titillium Sans Pro" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
     <mj-attributes>
-      <mj-all font-family="Titillium Web, system-ui, sans-serif" />
+      <mj-all font-family="Titillium Sans Pro, system-ui, sans-serif" />
     </mj-attributes>
     <mj-raw>
       <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
