@@ -1,0 +1,26 @@
+{
+  "name": "pagopa-email-templates",
+  "version": "1.0.0",
+  "description": "All the mail templates used by pagoPA",
+  "repository": "git@github.com:pagopa/pagopa-email-templates.git",
+  "author": "Damiano Plebani",
+  "license": "EUPL-1.2",
+  "type": "module",
+  "scripts": {
+    "generate": "yarn generateFailedState && yarn generatePaymentPending && yarn generatePaymentCompleted && yarn generatePaymentRefund",
+    "generateFailedState-txt": "node compileHandlebars.js --templateDir FailedState --data failed.json --txtVersion",
+    "generateFailedState": "node compileHandlebars.js --templateDir FailedState --data failed.json && node compileMjml.js --templateDir FailedState",
+    "generatePaymentRefund": "node compileHandlebars.js --templateDir PaymentRefund && node compileMjml.js --templateDir PaymentRefund",
+    "generatePaymentCompleted-txt": "node compileHandlebars.js --templateDir PaymentCompleted --data single-cart.json --txtVersion",
+    "generatePaymentCompleted": "node compileHandlebars.js --templateDir PaymentCompleted --data single-cart.json && node compileMjml.js --templateDir PaymentCompleted",
+    "generatePaymentCompleted-stressTest": "node compileHandlebars.js --templateDir PaymentCompleted --data single-cart-stress-test.json && node compileMjml.js --templateDir PaymentCompleted",
+    "generatePaymentCompleted-multipleItems": "node compileHandlebars.js --templateDir PaymentCompleted --data multiple-cart-items.json && node compileMjml.js --templateDir PaymentCompleted",
+    "generatePaymentPending": "node compileHandlebars.js --templateDir PaymentPending --data single-cart.json && node compileMjml.js --templateDir PaymentPending",
+    "generatePaymentPending-multipleItems": "node compileHandlebars.js --templateDir PaymentPending --data multiple-cart-items.json && node compileMjml.js --templateDir PaymentPending"
+  },
+  "devDependencies": {
+    "handlebars": "^4.7.8",
+    "js-beautify": "^1.15.1",
+    "mjml": "^4.15.3"
+  }
+}

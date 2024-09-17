@@ -1,0 +1,95 @@
+<mjml lang="it">
+  <mj-head>
+    <mj-title>Il pagamento non &egrave; riuscito</mj-title>
+    <mj-font name="Titillium Sans Pro" href="https://selfcare.pagopa.it/assets/font/selfhostedfonts.css" />
+    <mj-attributes>
+      <mj-all font-family="Titillium Sans Pro, system-ui, sans-serif" />
+    </mj-attributes>
+    <mj-raw>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+      <meta name="color-scheme" content="light dark" />
+      <meta name="supported-color-schemes" content="light dark" />
+    </mj-raw>
+  </mj-head>
+  <mj-body css-class="mail-body">
+    <mj-include path="../../styles/style.css" type="css" />
+    <mj-wrapper>
+      <mj-section css-class="header" padding-bottom="0">
+        <mj-column>
+          <mj-include path="../../partials/header-logo.mjml" />
+          <!-- Title & Main Message -->
+          <mj-text css-class="title" font-weight="bold" align="left" padding-top="16px" padding-bottom="16px">
+            <h1 style="font-size: 32px; line-height: 40px; margin: 0;">
+              Il pagamento non &egrave; riuscito
+            </h1>
+          </mj-text>
+          <mj-spacer height="16px" css-class="spacer" />
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left"
+            padding-top="0px" padding-bottom="8px">
+            <p>
+              L’importo autorizzato &egrave; stato rimborsato sul tuo metodo di pagamento.<br aria-hidden="true">
+              Il trasferimento di denaro potrebbe richiedere del tempo.
+            </p>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Divider -->
+      <mj-include path="../../partials/divider.mjml" />
+
+      <mj-section css-class="section" padding-bottom="16px" padding-top="8px">
+        <mj-column>
+          <!-- Cosa puoi fare ora? -->
+          <mj-text css-class="value" color="#17324D" font-size="22px" line-height="28px" font-weight="bold"
+            padding-top="0px" padding-bottom="24px">
+            Cosa puoi fare ora?
+          </mj-text>
+
+          <!-- Paga l'avviso -->
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="bold" align="left"
+            padding-top="0px" padding-bottom="0px">
+            Paga l&rsquo;avviso
+          </mj-text>
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left"
+            padding-top="0px" padding-bottom="0px">
+            Ricorda di pagare l&rsquo;avviso entro le scadenze previste dall&rsquo;ente. Se non riesci online, <a
+              href="https://www.pagopa.gov.it/it/cittadini/dove-pagare/" class="link" style="font-weight: bold;">scopri
+              gli altri canali abilitati a pagoPA</a>.
+          </mj-text>
+
+          <mj-spacer height="24px" css-class="spacer" />
+
+          <!-- Attendi il rimborso -->
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="bold" align="left"
+            padding-top="0px" padding-bottom="0px">
+            Attendi il rimborso
+          </mj-text>
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left"
+            padding-top="0px" padding-bottom="0px">
+            Di solito l&rsquo;importo viene riaccreditato entro pochi minuti. In altri casi, il trasferimento di denaro
+            sul tuo conto o carta potrebbe richiedere più tempo.
+          </mj-text>
+
+          <mj-spacer height="24px" css-class="spacer" />
+
+          <!-- Contatta l'assistenza -->
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="bold" align="left"
+            padding-top="0px" padding-bottom="0px">
+            Contatta l&rsquo;assistenza
+          </mj-text>
+          <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular" align="left"
+            padding-top="0px" padding-bottom="0px">
+            Se dopo 5 giorni lavorativi non hai ancora ricevuto il rimborso, <a href="https://pagopa.gov.it/assistenza"
+              class="link" style="font-weight: bold;">contatta l&rsquo;assistenza</a>.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- Divider -->
+      <mj-include path="../../partials/divider.mjml" />
+
+      <!-- Footer -->
+      <mj-include path="../../partials/footer.mjml" />
+    </mj-wrapper>
+  </mj-body>
+</mjml>

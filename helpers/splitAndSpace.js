@@ -1,0 +1,1 @@
+export const splitAndSpace = (str) => str.match(/(.{2,4})/gy).join(" ");

@@ -1,0 +1,6 @@
+{{#eq @root.cart.items.length 1}}
+Ricevuta del pagamento a {{@root.cart.items.[0].payee.name}}
+{{/eq}}
+{{#not @root.cart.items.length 1}}
+Ricevuta di pagamento
+{{/not}}

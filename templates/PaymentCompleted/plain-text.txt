@@ -1,0 +1,32 @@
+** Ricevuta del pagamento a Comune di Controguerra **
+Il tuo pagamento è andato a buon fine. Ecco i dettagli dell'operazione.
+
+
+- - - - - - - - - - -
+
+Oggetto del pagamento:
+TARI 2024
+
+- - - - - - - - - - -
+
+Debitore: Giuseppe Bianchi (BNCGSP70A12F205X)
+Ente creditore: Comune di Controguerra
+Codice Fiscale ente: 82001760675
+Codice Avviso: 123456789012345678
+Importo: 150,00
+
+Commissione (applicata da Nexi): 2,00 €
+
+Totale: 152,00 €
+
+- - - - - - - - - - -
+
+Serve aiuto? Visita https://pagopa.gov.it/assistenza
+
+Non rispondere a questo indirizzo email: è utilizzato solo per l’invio di questa comunicazione e, non essendo
+monitorato, non riceveresti risposta.
+
+- - - - - - - - - - -
+
+A presto,
+il team di pagoPA

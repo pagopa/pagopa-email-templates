@@ -1,0 +1,1 @@
+export const not = (a, b, options) => a !== b ? options.fn(this) : null;

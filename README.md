@@ -2,32 +2,72 @@
 
 This repo contains the mail templates used by pagoPA, created using [MJML](https://mjml.io/) markup language.
 
-## How to apply changes
+## Prerequisites
 
-To edit them, you can choose among these following options:
-
-- [Online editor](https://mjml.io/try-it-live)
-- [Local installation](https://mjml.io/download)
-- [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=mjmlio.vscode-mjml)
-
-To generate the HTML output you need to install these CLI tools:
-
-1. [MJML](https://github.com/keithamus/hbs-cli) package:
+To generate the HTML (or `.txt`) output you will need to install two packages locally, `mjml` and `handlebars`. You can install them with the following command:
 
 ```shell
-$ npm install --g mjml
+$ npm install
+# or
+$ yarn
 ```
 
-2. [Handlebars CLI](https://github.com/keithamus/hbs-cli) to render handlebars templates:
+To preview the MJML files in your IDE, please install the [Visual Studio Code plugin](https://marketplace.visualstudio.com/items?itemName=mjmlio.vscode-mjml).
+
+>[!note]
+> 🖼️ You can preview each single template by opening the relative image in the `previews` folder **OR** by opening the `index.html` file contained in each template subfolder (after generating the HTML version).
+
+## Generate the receipts
+
+>[!important]
+> To apply changes, please note that the appropriate source file is:
+> - `index.hbs` for the HTML version
+> - `plain.text.hbs` for the `.txt` version
+
+Every template is generated following the same pattern:
+
+* **HTML version**: 
+Source file (`.hbs`) → Handlebars compilation using the relative `*.json` data file (if present) → Intermediate file (`*.mjml`) -> Mjml compilation → Final output (`*.html`)
+* **Txt version**: 
+Source file (`.hbs`) → Handlebars compilation using the relative `*.json` data file (if present) → Final output (`*.txt`)
+
+### Completed payment
 
 ```shell
-$ npm install --g hbs-cli
+## HTML version (Single cart)
+$ yarn generatePaymentCompleted
+## HTML version (Multiple cart items)
+$ yarn generatePaymentCompleted-multipleItems
+### HTML version (Stress test, longer strings)
+$ yarn generatePaymentCompleted-stressTest
+## .txt version
+$ yarn generatePaymentCompleted-txt
 ```
 
-For the specific commands, take in consideration the local README files:
+### Pending payment
 
-1. [Receipt · Success](/Receipt_Success/)
-1. [Receipt · KO](/Receipt_KO/)
+```shell
+## HTML version
+$ yarn generatePaymentPending
+## HTML version (Multiple cart items)
+$ yarn generatePaymentPending-multipleItems
+```
+
+### Refund
+
+```shell
+## HTML version
+$ yarn generatePaymentRefund
+```
+
+### Fail
+
+```shell
+## HTML version
+$ yarn generateFailedState
+## .txt version
+$ yarn generateFailedState-txt
+```
 
 ## How to deploy changes
 
