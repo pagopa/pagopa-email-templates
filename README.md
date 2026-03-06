@@ -18,11 +18,7 @@ To generate the HTML output you need to install these CLI tools:
 $ npm install --g mjml
 ```
 
-2. [Handlebars CLI](https://github.com/keithamus/hbs-cli) to render handlebars templates:
-
-```shell
-$ npm install --g hbs-cli
-```
+2. [Handlebars CLI](https://github.com/keithamus/hbs-cli) to render handlebars templates (via `npx`, no global install needed)
 
 For the specific commands, take in consideration the local README files:
 

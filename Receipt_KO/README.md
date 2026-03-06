@@ -3,7 +3,7 @@
 ### Generate the plain text version:
 
 ```shell
-$ hbs --data ./ko.json -o ./ -e txt -- ./plain-text.hbs
+$ npx hbs-cli --data ./ko.json -o ./ -e txt -- ./plain-text.hbs
 ```
 
 ### Generate the HTML version:

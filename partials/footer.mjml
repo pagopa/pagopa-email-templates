@@ -1,19 +1,28 @@
 <mj-section css-class="section">
   <mj-column>
     <!-- Help -->
-    <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular">
-      <h4>Serve aiuto?</h4>
+    <mj-text
+      css-class="text"
+      font-size="16px"
+      line-height="24px"
+      font-weight="regular"
+    >
       <p>
-        Contatta il <a href="https://www.pagopa.gov.it/it/pagopa/helpdesk/" class="link" style="font-weight: bold;">servizio di assistenza</a>  e comunica il codice transazione:
-        <br aria-hidden="true">
-        {{transaction.id}}
+        Codice transazione: {{ transaction.id }}
         <!-- F57E2F8E-25FF-4183-AB7B-4A5EC1A96644 -->
       </p>
     </mj-text>
     <mj-spacer height="8px" css-class="spacer" />
-    <mj-text css-class="text" font-size="16px" line-height="24px" font-weight="regular">
+    <mj-text
+      css-class="text"
+      font-size="16px"
+      line-height="24px"
+      font-weight="regular"
+    >
       <p>
-        Non rispondere a questo indirizzo email: &egrave; utilizzato solo per l'invio di questa comunicazione e, non essendo monitorato, non riceveresti risposta.
+        Non rispondere a questo indirizzo email: &egrave; utilizzato solo per
+        l'invio di questa comunicazione e, non essendo monitorato, non
+        riceveresti risposta.
       </p>
     </mj-text>
     <mj-spacer height="8px" css-class="spacer" />
@@ -21,7 +30,7 @@
     <mj-text css-class="text" font-size="16px" line-height="24px">
       <p>
         A presto,
-        <br aria-hidden="true">il team di pagoPA
+        <br aria-hidden="true" />il team di pagoPA
       </p>
     </mj-text>
   </mj-column>

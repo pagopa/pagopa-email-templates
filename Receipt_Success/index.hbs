@@ -286,7 +286,7 @@
 </head>
 
 <body style="word-spacing:normal;">
-  <div class="mail-body" style="" lang="it" dir="auto">
+  <div aria-label="Il riepilogo del tuo pagamento" aria-roledescription="email" class="mail-body" style="" role="article" lang="it" dir="auto">
     <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" role="presentation" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
     <div style="margin:0px auto;max-width:600px;">
       <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
@@ -332,7 +332,7 @@
                               <tr>
                                 <td align="left" class="title" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:Titillium Web, system-ui, sans-serif;font-size:13px;font-weight:bold;line-height:1;text-align:left;color:#000000;">
-                                    <h1 style="font-size: 32px; line-height: 40px; margin: 0;"> Hai inviato un pagamento di {{transaction.amount}}&nbsp;&euro; tramite pagoPA </h1>
+                                    <h1 style="font-size: 32px; line-height: 40px; margin: 0"> Hai inviato un pagamento di {{ transaction.amount }}&nbsp;&euro; tramite pagoPA </h1>
                                   </div>
                                 </td>
                               </tr>
@@ -769,9 +769,7 @@
                               <tr>
                                 <td align="left" class="text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:Titillium Web, system-ui, sans-serif;font-size:16px;font-weight:regular;line-height:24px;text-align:left;color:#000000;">
-                                    <h4>Serve aiuto?</h4>
-                                    <p> Contatta il <a href="https://www.pagopa.gov.it/it/pagopa/helpdesk/" class="link" style="font-weight: bold;">servizio di assistenza</a> e comunica il codice transazione: <br aria-hidden="true">
-                                      {{transaction.id}}
+                                    <p> Codice transazione: {{ transaction.id }}
                                       <!-- F57E2F8E-25FF-4183-AB7B-4A5EC1A96644 -->
                                     </p>
                                   </div>
@@ -797,7 +795,7 @@
                               <tr>
                                 <td align="left" class="text" style="font-size:0px;padding:10px 25px;word-break:break-word;">
                                   <div style="font-family:Titillium Web, system-ui, sans-serif;font-size:16px;line-height:24px;text-align:left;color:#000000;">
-                                    <p> A presto, <br aria-hidden="true">il team di pagoPA </p>
+                                    <p> A presto, <br aria-hidden="true" />il team di pagoPA </p>
                                   </div>
                                 </td>
                               </tr>
