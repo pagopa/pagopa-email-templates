@@ -61,12 +61,14 @@
       <mj-include path="../partials/divider.mjml" />
       <!-- Transaction Detail -->
       <mj-include path="../partials/transaction_detail.mjml" />
-      <!-- Divider -->
-      <mj-include path="../partials/divider.mjml" />
       <!-- Bank Charges -->
       <mj-raw>{{#if transaction.paymentMethod.extraFee}}</mj-raw>
       <mj-include path="../partials/bank-charges-disclaimer.mjml" />
       <mj-raw>{{/if}}</mj-raw>
+      <!-- Divider -->
+      <mj-include path="../partials/divider.mjml" />
+      <!-- Anti-scam -->
+      <mj-include path="../partials/anti-phishing.mjml" />
       <!-- Footer -->
       <mj-include path="../partials/footer.mjml" />
     </mj-wrapper>
