@@ -12,7 +12,7 @@ To edit them, you can choose among these following options:
 
 To generate the HTML output you need to install these CLI tools:
 
-1. [MJML](https://github.com/keithamus/hbs-cli) package:
+1. [MJML](https://github.com/mjmlio/mjml) package:
 
 ```shell
 $ npm install --g mjml
@@ -23,11 +23,15 @@ $ npm install --g mjml
 For the specific commands, take in consideration the local README files:
 
 1. [Receipt · Success](/Receipt_Success/)
-1. [Receipt · KO](/Receipt_KO/)
+2. [Receipt · KO](/Receipt_KO/)
 
 ## How to deploy changes
 
-All the mail are sent through [pagopa-notifications-service](https://github.com/pagopa/pagopa-notifications-service).
+All the mail are sent through [pagopa-notifications-service](https://github.com/pagopa/pagopa-notifications-service), it 
+uses the `hbs` templates file to generate all the different variants.
+All you need to do is to:
+- Copy [Success template](/Receipt_Success/index.hbs) into [Notification Service Success template](https://github.com/pagopa/pagopa-notifications-service/blob/main/src/templates/success/success.template.html)
+- Copy [KO template](/Receipt_KO/index.hbs) into [Notification Service Success template](https://github.com/pagopa/pagopa-notifications-service/blob/main/src/templates/ko/ko.template.html)
 
 ## PDF Receipt
 If you're looking for the relative PDF receipt, please refer to the [pagopa-template-receipt-pdf](https://github.com/pagopa/pagopa-template-receipt-pdf)

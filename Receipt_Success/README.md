@@ -41,7 +41,7 @@ $ npx hbs-cli -H ./helpers/eq.js -H ./helpers/not.js --data ./json/guest.json -o
 Update the original `mjml` file and generate the relative `hbs` template file:
 
 ```shell
-$ mjml index.mjml -o index.hbs --config.keepComments=0
+$ mjml index.mjml -o index.hbs --config.keepComments true --config.allowIncludes true --config.includePath '["../partials","../"]'
 ```
 
 [pagopa-notifications-service](https://github.com/pagopa/pagopa-notifications-service) uses the `hbs` template file to generate all the different variants.
