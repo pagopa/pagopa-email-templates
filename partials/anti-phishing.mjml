@@ -1,0 +1,35 @@
+<mj-section css-class="section" padding="8px 25px">
+  <mj-column background-color="#dbf9fa" border-radius="8px" padding="24px">
+    <mj-image
+      width="40px"
+      align="left"
+      src="../assets/icon-security.png"
+      padding="0px 0px 16px 0px"
+    />
+    <mj-text
+      color="#17324D"
+      font-size="18px"
+      line-height="24px"
+      font-weight="bold"
+      padding="0px"
+    >
+      Fai attenzione alle truffe online
+    </mj-text>
+    <mj-text
+      color="#17324D"
+      font-size="16px"
+      line-height="24px"
+      font-weight="regular"
+      padding="4px 0px 0px 0px"
+    >
+      Alcune usano il nome e il logo di pagoPA per simulare comunicazioni
+      ufficiali. Impara a riconoscerle ed evitarle con la
+      <a
+        href="https://www.pagopa.gov.it/phishing"
+        class="link"
+        style="font-weight: bold"
+        ><strong>guida contro il phishing e altre truffe</strong></a
+      >.
+    </mj-text>
+  </mj-column>
+</mj-section>
